@@ -10,7 +10,8 @@ export default {
       <div class="slide-inner">
         <div class="eyebrow">Arsitektur</div>
         <h1 class="slide-title">Arsitektur Sistem <span>Lengkap</span></h1>
-        <p class="slide-lead">Sistem BITS terdiri dari 4 komponen inti yang bekerja bersama, seluruhnya di-hosting <i>on-premise</i> di intranet perusahaan.</p>
+        <p class="slide-lead">Sistem BITS dibangun menggunakan arsitektur modern yang memisahkan antara antarmuka pengguna, layanan API, dan pusat penyimpanan data.</p>
+
 
         <div class="arch-wrap">
           <div class="arch-row">
@@ -46,16 +47,15 @@ export default {
               <div class="arch-desc">Database relasional utama</div>
             </div>
             <div class="arch-box">
+              <div class="arch-ic" style="background:#dc2626;">SQL</div>
+              <div class="arch-name">MS SQL Server</div>
+              <div class="arch-desc">Sumber Data Eksternal (Dashboard DevExpress)</div>
+            </div>
+            <div class="arch-box">
               <div class="arch-ic" style="background:#8b5cf6;">DS</div>
               <div class="arch-name">Dashboard Server</div>
               <div class="arch-desc">ASP.NET Core — khusus DevExpress</div>
             </div>
-          </div>
-        </div>
-        <div style="text-align:center;">
-          <div class="arch-onprem">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>
-            Seluruh infrastruktur di-hosting on-premise di intranet PT Tiga Serangkai Inti Corpora
           </div>
         </div>
       </div>
