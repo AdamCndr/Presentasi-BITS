@@ -58,6 +58,91 @@ export default {
             </div>
           </div>
         </div>
+        
+        <style>
+          /* ── ARCHITECTURE ANIMATIONS ── */
+          
+          @keyframes archTitleIn {
+            from { opacity: 0; transform: translateY(-20px); filter: blur(8px); }
+            to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+          }
+          @keyframes archBoxIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); filter: blur(10px); }
+            to   { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+          }
+          @keyframes archConnectorIn {
+            from { opacity: 0; transform: scaleY(0); transform-origin: top center; }
+            to   { opacity: 1; transform: scaleY(1); }
+          }
+          @keyframes archGlowPulse {
+            0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+            50%       { box-shadow: 0 12px 28px rgba(13,148,136,0.15), 0 0 0 1px rgba(13,148,136,0.08); }
+          }
+
+          /* OPENING TITLE */
+          .slide[data-id="arsitektur"].active .eyebrow {
+            animation: archTitleIn 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+          }
+          .slide[data-id="arsitektur"].active h1.slide-title {
+            animation: archTitleIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+          }
+          .slide[data-id="arsitektur"].active .slide-lead {
+            animation: archTitleIn 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+          }
+
+          /* TOP ROW (Frontend) */
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(1) .arch-box:nth-child(1) {
+            animation: archBoxIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+          }
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(1) .arch-box:nth-child(2) {
+            animation: archBoxIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+          }
+
+          /* CONNECTORS TO BACKEND */
+          .slide[data-id="arsitektur"].active .arch-wrap > div:nth-child(2) .arch-connector {
+            animation: archConnectorIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+          }
+
+          /* MIDDLE ROW (Backend) */
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(3) .arch-box {
+            animation: archBoxIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
+          }
+
+          /* CONNECTORS TO DBs */
+          .slide[data-id="arsitektur"].active .arch-wrap > div:nth-child(4) .arch-connector {
+            animation: archConnectorIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
+          }
+
+          /* BOTTOM ROW (Databases/Dashboard Server) */
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(1) {
+            animation: archBoxIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.3s both;
+          }
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(2) {
+            animation: archBoxIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.4s both;
+          }
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(3) {
+            animation: archBoxIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.5s both;
+          }
+
+          /* IDLE */
+          .slide[data-id="arsitektur"].active .arch-box {
+            /* Keep original entrance animation, append idle */
+            animation-name: archBoxIn, archGlowPulse;
+            animation-duration: 1.2s, 6s;
+            animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1), ease-in-out;
+            animation-iteration-count: 1, infinite;
+            animation-fill-mode: both, none;
+          }
+          
+          /* Need to re-declare delays for idle glow so they don't break */
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(1) .arch-box:nth-child(1) { animation-delay: 0.4s, 2s; }
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(1) .arch-box:nth-child(2) { animation-delay: 0.5s, 2s; }
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(3) .arch-box { animation-delay: 0.9s, 2s; }
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(1) { animation-delay: 1.3s, 2s; }
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(2) { animation-delay: 1.4s, 2s; }
+          .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(3) { animation-delay: 1.5s, 2s; }
+
+        </style>
       </div>
     `;
   },
