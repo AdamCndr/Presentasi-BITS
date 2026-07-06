@@ -4,7 +4,8 @@ export default {
   title: 'Cover',
   order: 0,
   assets: [
-    'assets/brand/bits.png',
+    'assets/brand/bitshorizontal.png',
+    'assets/images/MockupHome.png',
     'assets/icons/powerbi.png',
     'assets/icons/looker.png',
     'assets/icons/lookerstudio.png',
@@ -18,7 +19,9 @@ export default {
       <div class="cover">
         <div class="cover-content">
           <div class="cover-badge">PT Tiga Serangkai Inti Corpora · <b>Kerja Praktek 2026</b></div>
-          <img src="assets/brand/bits.png" alt="BITS" style="height:110px; width:auto; object-fit:contain; margin-top:12px; margin-bottom:12px; display:block;">
+          <div class="cover-logo">
+            <img src="assets/brand/bitshorizontal.png" alt="BITS" style="height:72px; width:auto; object-fit:contain; display:block;">
+          </div>
           <div class="cover-full">Business Intelligence Tiga Serangkai Portal</div>
           <p class="cover-quote">Satu portal. Semua dashboard. Akses seluruh data bisnis dari <i>Power BI</i> hingga <i>DevExpress</i> dalam satu antarmuka yang seragam.</p>
           <div class="cover-meta"><span>Presentasi Full Tim</span><span class="sep"></span><span>Februari – Juni 2026</span></div>
@@ -32,9 +35,9 @@ export default {
           </div>
         </div>
         <div class="cover-floats">
-          <div class="fcard fc1"><div class="fcard-dot" style="background:var(--accent-primary)"></div><div><div class="fcard-label">Platform BI</div><div class="fcard-value">6</div></div></div>
-          <div class="fcard fc2"><div class="fcard-dot" style="background:var(--accent-secondary)"></div><div><div class="fcard-label">Developer</div><div class="fcard-value">4</div></div></div>
-          <div class="fcard fc3"><div class="fcard-dot" style="background:#8b5cf6"></div><div><div class="fcard-label">Portal Terpusat</div><div class="fcard-value">1</div></div></div>
+          <div class="cover-mockup-wrapper">
+            <img src="assets/images/MockupHome.png" alt="Portal Mockup" class="cover-mockup" />
+          </div>
         </div>
       </div>
     `;

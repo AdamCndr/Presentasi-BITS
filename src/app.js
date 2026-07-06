@@ -18,8 +18,6 @@ import { initRouter, syncHash } from './router.js';
 // ── UI Components ──
 import { mountHeader } from './components/header.js';
 import { mountProgress } from './components/progress.js';
-import { mountDots } from './components/nav-dots.js';
-import { mountArrows } from './components/nav-arrows.js';
 
 // ═══════════════════════════════════════════
 // 1. Build the ordered slide registry
@@ -40,8 +38,6 @@ setTotal(slides.length);
 // ═══════════════════════════════════════════
 mountHeader(document.getElementById('headerMount'), slides);
 mountProgress(document.getElementById('progressMount'), slides.length);
-mountDots(document.getElementById('dotsMount'), slides);
-mountArrows(document.getElementById('arrowsMount'));
 
 // ═══════════════════════════════════════════
 // 4. Render all slides into the deck
@@ -74,20 +70,54 @@ function renderSlides(state) {
 }
 
 subscribe(renderSlides);
-
 subscribe(syncHash);
 
 // ═══════════════════════════════════════════
 // 6. Initialize the router (reads initial hash)
 // ═══════════════════════════════════════════
 initRouter(slides);
-
 renderSlides(getState());
 
 // ═══════════════════════════════════════════
 // 7. Keyboard navigation
 // ═══════════════════════════════════════════
+let isStarted = false;
+
+function startPresentation() {
+  if (isStarted) return;
+  const waitingScreen = document.getElementById('waiting-screen');
+  const splash = document.getElementById('splash');
+
+  if (waitingScreen) waitingScreen.classList.add('hide');
+  if (splash) {
+    splash.classList.remove('uninitialized');
+    setTimeout(() => {
+      splash.classList.add('hide');
+      isStarted = true;
+    }, 1800);
+  } else {
+    isStarted = true;
+  }
+}
+
 document.addEventListener('keydown', (e) => {
+  if (!isStarted) {
+    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter'].includes(e.key)) {
+      e.preventDefault();
+      startPresentation();
+    }
+    return;
+  }
+
+  // Escape closes slide picker modal
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('slidePickerModal');
+    if (modal && modal.classList.contains('open')) {
+      modal.classList.remove('open');
+      return;
+    }
+  }
+
   if (['ArrowRight', 'ArrowDown', ' ', 'PageDown'].includes(e.key)) {
     e.preventDefault();
     next();
@@ -110,6 +140,7 @@ deck.addEventListener('touchstart', (e) => {
 }, { passive: true });
 
 deck.addEventListener('touchend', (e) => {
+  if (!isStarted) return;
   if (touchX === null) return;
   const dx = e.changedTouches[0].clientX - touchX;
   if (Math.abs(dx) > 55) {
@@ -129,10 +160,11 @@ document.addEventListener('mousemove', (e) => {
 });
 
 // ═══════════════════════════════════════════
-// 10. Splash screen
+// 10. Waiting screen click listener
 // ═══════════════════════════════════════════
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('splash').classList.add('hide');
-  }, 900);
+  const waitingScreen = document.getElementById('waiting-screen');
+  if (waitingScreen) {
+    waitingScreen.addEventListener('click', startPresentation);
+  }
 });

@@ -9,12 +9,27 @@
 </head>
 <body>
 
-<!-- SPLASH -->
-<div class="splash" id="splash">
-  <div class="splash-mark">
-    <img src="assets/brand/bits.png" alt="BITS" style="height:64px; width:auto; object-fit:contain; animation:pop .7s var(--ease-spring);">
+<!-- WAITING SCREEN -->
+<div class="waiting-screen" id="waiting-screen">
+  <div class="waiting-content">
+    <img src="assets/brand/bitshorizontal.png" alt="BITS" class="waiting-logo" />
   </div>
-  <div class="splash-dots"><span></span><span></span><span></span></div>
+</div>
+
+<!-- SPLASH -->
+<div class="splash-overlay uninitialized" id="splash">
+  <div class="splash-brand">
+    <div class="splash-icon">
+      <img src="assets/brand/Logo.png" alt="" />
+    </div>
+    <div class="splash-sep"></div>
+    <div class="splash-wordmark">
+      <img src="assets/brand/bits.png" alt="BITS" />
+    </div>
+  </div>
+  <div class="splash-dots">
+    <span></span><span></span><span></span>
+  </div>
 </div>
 
 <!-- ═══════════ MOUNT POINTS FOR COMPONENTS ═══════════ -->
@@ -23,12 +38,6 @@
 
 <!-- Progress bar -->
 <div id="progressMount"></div>
-
-<!-- Dots navigation -->
-<div id="dotsMount"></div>
-
-<!-- Arrow navigation -->
-<div id="arrowsMount"></div>
 
 <!-- GLOBAL GLOW -->
 <div class="grid-bg"></div>

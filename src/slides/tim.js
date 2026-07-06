@@ -16,8 +16,9 @@ export default {
         <div class="team-grid">
 
           <div class="card team-card">
-            <div class="team-photo" style="background:linear-gradient(160deg,#0d9488,#0f766e);">
-              <span class="team-photo-initial">AC</span>
+            <div class="team-photo">
+              <div class="team-photo-veil"></div>
+              <img src="assets/team/adam.jpeg" alt="Adam" style="width:100%;height:100%;object-fit:cover;">
             </div>
             <div class="team-body">
               <div class="team-name">Adam Candra Kirana Wardana</div>
@@ -32,8 +33,9 @@ export default {
           </div>
 
           <div class="card team-card">
-            <div class="team-photo" style="background:linear-gradient(160deg,#8b5cf6,#7c3aed);">
-              <span class="team-photo-initial">MN</span>
+            <div class="team-photo">
+              <div class="team-photo-veil"></div>
+              <img src="assets/team/naufal.png" alt="Naufal" style="width:100%;height:100%;object-fit:cover;">
             </div>
             <div class="team-body">
               <div class="team-name">Muhammad Naufal Irfani</div>
@@ -48,8 +50,9 @@ export default {
           </div>
 
           <div class="card team-card">
-            <div class="team-photo" style="background:linear-gradient(160deg,#f59e0b,#d97706);">
-              <span class="team-photo-initial">SG</span>
+            <div class="team-photo">
+              <div class="team-photo-veil"></div>
+              <img src="assets/team/septian.png" alt="Septian" style="width:100%;height:100%;object-fit:cover;">
             </div>
             <div class="team-body">
               <div class="team-name">Septian Gilang Dwi Prasetyo</div>
@@ -65,6 +68,7 @@ export default {
 
           <div class="card team-card">
             <div class="team-photo" style="background:linear-gradient(160deg,#0ea5e9,#0284c7);">
+              <div class="team-photo-veil"></div>
               <span class="team-photo-initial">AB</span>
             </div>
             <div class="team-body">
