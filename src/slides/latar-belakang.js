@@ -15,33 +15,33 @@ export default {
           <div class="card problem-card">
             <div class="problem-num">01</div>
             <div>
-              <div class="problem-title">6 platform BI berjalan terpisah — Power BI, Looker, Looker Studio, Metabase, Tableau, DevExpress</div>
-              <div class="problem-impact"><b>Dampak:</b> karyawan harus login &amp; berpindah antar 6 sistem berbeda hanya untuk data lintas departemen.</div>
+              <div class="problem-title">6 Platform BI Berjalan Terpisah — Power BI, Looker, Looker Studio, Metabase, Tableau, DevExpress</div>
+              <div class="problem-impact"><b>Dampak:</b> Akses data menjadi tidak efisien karena karyawan harus login dan berpindah antar 6 platform berbeda secara bergantian untuk memantau laporan.</div>
             </div>
           </div>
           <div class="card problem-card">
             <div class="problem-num">02</div>
             <div>
-              <div class="problem-title">Tidak ada kontrol akses terpusat</div>
-              <div class="problem-impact"><b>Dampak:</b> pengelolaan "siapa boleh lihat dashboard apa" bergantung tiap platform, tidak konsisten.</div>
+              <div class="problem-title">Tidak Ada Sistem Portal Terpadu Dengan Kontrol Akses Berdasarkan Jabatan.</div>
+              <div class="problem-impact"><b>Dampak:</b> Pengelolaan "dashboard apa untuk jabatan apa" menjadi rumit dan rentan terjadi kebocoran hak akses data (tidak sesuai kewenangan).</div>
             </div>
           </div>
           <div class="card problem-card">
             <div class="problem-num">03</div>
             <div>
-              <div class="problem-title">Tidak ada mode presentasi / kiosk terpusat</div>
-              <div class="problem-impact"><b>Dampak:</b> monitoring real-time di layar publik tidak bisa dilakukan dari satu titik.</div>
+              <div class="problem-title">Tidak Mendukung Mode Presentasi</div>
+              <div class="problem-impact"><b>Dampak:</b> Pengguna harus membuka dan berpindah platform secara manual ketika ingin menyajikan beberapa laporan data secara berurutan.</div>
             </div>
           </div>
           <div class="card problem-card">
             <div class="problem-num">04</div>
             <div>
-              <div class="problem-title">Akses hanya via browser desktop</div>
+              <div class="problem-title">Akses Hanya Via Browser Desktop</div>
               <div class="problem-impact"><b>Dampak:</b> manajemen tidak bisa memantau data dari perangkat mobile.</div>
             </div>
           </div>
         </div>
-        <div class="closing-line"><b>Intinya:</b> data analytics yang harusnya mempercepat keputusan, justru menimbulkan overhead karena tersebar di mana-mana.</div>
+        <div class="closing-line"><b>Intinya:</b> Platform BI yang tersebar menghambat efisiensi karyawan dalam memantau data, sekaligus merumitkan kontrol wewenang antar jabatan.</div>
       </div>
     `;
   },
