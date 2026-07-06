@@ -393,7 +393,8 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 260px; /* fixed width to prevent shifting */
+  width: 260px;
+  /* fixed width to prevent shifting */
   padding: 8px;
   border-radius: 8px;
   transition: background 0.2s ease;
@@ -427,7 +428,8 @@ body {
 .slide-picker-modal {
   position: fixed;
   inset: 0;
-  top: 64px; /* Attach below header */
+  top: 64px;
+  /* Attach below header */
   z-index: 9000;
   pointer-events: none;
   display: flex;
@@ -479,7 +481,7 @@ body {
   justify-content: space-between;
   padding: 24px 28px 20px;
   border-bottom: 1px solid rgba(13, 148, 136, 0.1);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .slide-picker-title {
@@ -539,13 +541,16 @@ body {
 .slide-picker-list::-webkit-scrollbar {
   width: 6px;
 }
+
 .slide-picker-list::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .slide-picker-list::-webkit-scrollbar-thumb {
   background: rgba(13, 148, 136, 0.2);
   border-radius: 99px;
 }
+
 .slide-picker-list::-webkit-scrollbar-thumb:hover {
   background: rgba(13, 148, 136, 0.4);
 }
@@ -1365,6 +1370,70 @@ h1.slide-title span {
   line-height: 1.6;
 }
 
+/* scoping wrapper + ambient depth layer */
+.sol-slide {
+  position: relative;
+}
+
+.sol-ambient {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: 900px;
+  height: 480px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(13, 148, 136, .10) 0%, rgba(14, 165, 233, .06) 45%, transparent 72%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sol-slide .grid-4 {
+  position: relative;
+  z-index: 1;
+}
+
+/* icon: hover micro-interaction + contained glint layer */
+.sol-icon {
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s var(--ease-out-expo);
+}
+
+.sol-icon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, .6) 50%, transparent 70%);
+  transform: translateX(-160%) skewX(-20deg);
+  pointer-events: none;
+}
+
+.sol-card:hover .sol-icon {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* hover accent matched to each card's own icon color */
+.sol-card:nth-child(1):hover {
+  border-color: rgba(13, 148, 136, .3);
+  box-shadow: 0 18px 42px rgba(13, 148, 136, .14);
+}
+
+.sol-card:nth-child(2):hover {
+  border-color: rgba(14, 165, 233, .3);
+  box-shadow: 0 18px 42px rgba(14, 165, 233, .14);
+}
+
+.sol-card:nth-child(3):hover {
+  border-color: rgba(139, 92, 246, .3);
+  box-shadow: 0 18px 42px rgba(139, 92, 246, .14);
+}
+
+.sol-card:nth-child(4):hover {
+  border-color: rgba(245, 158, 11, .3);
+  box-shadow: 0 18px 42px rgba(245, 158, 11, .14);
+}
+
 /* =============== SLIDE: ARSITEKTUR =============== */
 .arch-wrap {
   display: flex;
@@ -2094,6 +2163,135 @@ h1.slide-title span {
   }
 }
 
+/* Premium reveal + idle set (Solusi) */
+@keyframes riseInSm {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes numRise {
+  from {
+    opacity: 0;
+    transform: translateX(16px) scale(.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes iconPop {
+  0% {
+    opacity: 0;
+    transform: scale(.4) rotate(-10deg);
+  }
+
+  55% {
+    opacity: 1;
+    transform: scale(1.12) rotate(4deg);
+  }
+
+  80% {
+    transform: scale(.96) rotate(-1deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes iconGlint {
+  0% {
+    opacity: 0;
+    transform: translateX(-160%) skewX(-20deg);
+  }
+
+  4% {
+    opacity: .9;
+  }
+
+  14% {
+    opacity: 0;
+    transform: translateX(220%) skewX(-20deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+
+@keyframes iconGlowTeal {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0), 0 8px 18px rgba(13, 148, 136, .22);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 5px rgba(13, 148, 136, .45), 0 8px 18px rgba(13, 148, 136, .3);
+  }
+}
+
+@keyframes iconGlowSky {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0), 0 8px 18px rgba(14, 165, 233, .22);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 5px rgba(14, 165, 233, .45), 0 8px 18px rgba(14, 165, 233, .3);
+  }
+}
+
+@keyframes iconGlowPurple {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0), 0 8px 18px rgba(139, 92, 246, .22);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 5px rgba(139, 92, 246, .45), 0 8px 18px rgba(139, 92, 246, .3);
+  }
+}
+
+@keyframes iconGlowAmber {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0), 0 8px 18px rgba(245, 158, 11, .22);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 5px rgba(245, 158, 11, .45), 0 8px 18px rgba(245, 158, 11, .3);
+  }
+}
+
+@keyframes blobLife {
+
+  0%,
+  100% {
+    opacity: .5;
+    transform: translate(-50%, -50%) scale(.92);
+  }
+
+  50% {
+    opacity: .8;
+    transform: translate(-48%, -53%) scale(1.1);
+  }
+}
+
 /* Hover effect on team photo */
 .team-photo img,
 .team-photo-initial {
@@ -2304,4 +2502,151 @@ h1.slide-title span {
 
 .slide.active .team-card:nth-child(4) .team-role-ic {
   animation-delay: 1.42s;
+}
+
+/* Solusi (Slide 3) Animations */
+.slide.active .sol-slide .eyebrow {
+  animation: trackIn 0.7s var(--ease-out-expo) 0.1s backwards;
+}
+
+.slide.active .sol-slide h1.slide-title {
+  animation: revealFocus 0.85s var(--ease-out-expo) 0.22s backwards;
+}
+
+.slide.active .sol-slide .slide-lead {
+  animation: slideUpFade 0.65s var(--ease-out-expo) 0.36s backwards;
+}
+
+.slide.active .sol-slide .sol-ambient {
+  animation: blobLife 14s ease-in-out 0.3s infinite;
+}
+
+.slide.active .sol-card {
+  animation: cardReveal 0.75s var(--ease-out-expo) backwards;
+}
+
+.slide.active .sol-card:nth-child(1) {
+  animation-delay: 0.42s;
+}
+
+.slide.active .sol-card:nth-child(2) {
+  animation-delay: 0.52s;
+}
+
+.slide.active .sol-card:nth-child(3) {
+  animation-delay: 0.62s;
+}
+
+.slide.active .sol-card:nth-child(4) {
+  animation-delay: 0.72s;
+}
+
+/* watermark number: quick settle-in, no idle motion (kept still so it reads as a fixed backdrop mark) */
+.slide.active .sol-num {
+  animation: numRise 0.6s var(--ease-out-expo) backwards;
+}
+
+.slide.active .sol-card:nth-child(1) .sol-num {
+  animation-delay: 0.47s;
+}
+
+.slide.active .sol-card:nth-child(2) .sol-num {
+  animation-delay: 0.57s;
+}
+
+.slide.active .sol-card:nth-child(3) .sol-num {
+  animation-delay: 0.67s;
+}
+
+.slide.active .sol-card:nth-child(4) .sol-num {
+  animation-delay: 0.77s;
+}
+
+/* icon: spring pop-in entrance, then a soft breathing glow loop matched to its own accent color */
+.slide.active .sol-card:nth-child(1) .sol-icon {
+  animation: iconPop 0.55s var(--ease-spring) 0.57s backwards,
+    iconGlowTeal 3.4s ease-in-out 1.3s infinite;
+}
+
+.slide.active .sol-card:nth-child(2) .sol-icon {
+  animation: iconPop 0.55s var(--ease-spring) 0.67s backwards,
+    iconGlowSky 3.4s ease-in-out 1.6s infinite;
+}
+
+.slide.active .sol-card:nth-child(3) .sol-icon {
+  animation: iconPop 0.55s var(--ease-spring) 0.77s backwards,
+    iconGlowPurple 3.4s ease-in-out 1.9s infinite;
+}
+
+.slide.active .sol-card:nth-child(4) .sol-icon {
+  animation: iconPop 0.55s var(--ease-spring) 0.87s backwards,
+    iconGlowAmber 3.4s ease-in-out 2.2s infinite;
+}
+
+/* icon: occasional light glint sweep, offset per card so they never fire in sync */
+.slide.active .sol-card:nth-child(1) .sol-icon::after {
+  animation: iconGlint 4.6s ease-in-out 1.8s infinite;
+}
+
+.slide.active .sol-card:nth-child(2) .sol-icon::after {
+  animation: iconGlint 4.6s ease-in-out 2.9s infinite;
+}
+
+.slide.active .sol-card:nth-child(3) .sol-icon::after {
+  animation: iconGlint 4.6s ease-in-out 4s infinite;
+}
+
+.slide.active .sol-card:nth-child(4) .sol-icon::after {
+  animation: iconGlint 4.6s ease-in-out 5.1s infinite;
+}
+
+.slide.active .sol-title {
+  animation: riseInSm 0.5s var(--ease-out-expo) backwards;
+}
+
+.slide.active .sol-card:nth-child(1) .sol-title {
+  animation-delay: 0.6s;
+}
+
+.slide.active .sol-card:nth-child(2) .sol-title {
+  animation-delay: 0.7s;
+}
+
+.slide.active .sol-card:nth-child(3) .sol-title {
+  animation-delay: 0.8s;
+}
+
+.slide.active .sol-card:nth-child(4) .sol-title {
+  animation-delay: 0.9s;
+}
+
+.slide.active .sol-desc {
+  animation: riseInSm 0.5s var(--ease-out-expo) backwards;
+}
+
+.slide.active .sol-card:nth-child(1) .sol-desc {
+  animation-delay: 0.68s;
+}
+
+.slide.active .sol-card:nth-child(2) .sol-desc {
+  animation-delay: 0.78s;
+}
+
+.slide.active .sol-card:nth-child(3) .sol-desc {
+  animation-delay: 0.88s;
+}
+
+.slide.active .sol-card:nth-child(4) .sol-desc {
+  animation-delay: 0.98s;
+}
+
+/* respect reduced-motion preference: keep content visible, drop the motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .sol-slide *,
+  .sol-slide *::before,
+  .sol-slide *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

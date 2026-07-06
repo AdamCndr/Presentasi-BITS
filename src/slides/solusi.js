@@ -7,7 +7,8 @@ export default {
 
   render() {
     return `
-      <div class="slide-inner">
+      <div class="slide-inner sol-slide">
+        <div class="sol-ambient" aria-hidden="true"></div>
         <div class="eyebrow">Solusi</div>
         <h1 class="slide-title">Apa yang Kami <span>Bangun?</span></h1>
         <p class="slide-lead">Untuk menyelesaikan permasalahan di atas, kami membangun portal BITS dengan empat pilar solusi berikut.</p>
