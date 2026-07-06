@@ -36,8 +36,8 @@ export default {
           <div class="card problem-card">
             <div class="problem-num">04</div>
             <div>
-              <div class="problem-title">Akses Hanya Via Browser Desktop</div>
-              <div class="problem-impact"><b>Dampak:</b> manajemen tidak bisa memantau data dari perangkat mobile.</div>
+              <div class="problem-title">Akses Terbatas pada Perangkat Desktop</div>
+              <div class="problem-impact"><b>Dampak:</b> Pengguna kehilangan fleksibilitas untuk memantau evaluasi kinerja secara <i>mobile</i> atau saat berada di lapangan.</div>
             </div>
           </div>
         </div>
