@@ -42,6 +42,69 @@ export default {
           </div>
         </div>
         <div class="closing-line"><b>Intinya:</b> Platform BI yang tersebar menghambat efisiensi karyawan dalam memantau data, sekaligus merumitkan kontrol wewenang antar jabatan.</div>
+        
+        <style>
+          /* ── OPENING ANIMATIONS ── */
+          @keyframes fadeUpBlur {
+            from { opacity: 0; transform: translateY(24px); filter: blur(8px); }
+            to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+          }
+          @keyframes cardIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); filter: blur(10px); }
+            to   { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+          }
+          @keyframes closingIn {
+            from { opacity: 0; transform: scaleX(0.9); filter: blur(5px); }
+            to   { opacity: 1; transform: scaleX(1); filter: blur(0); }
+          }
+
+          /* STAGGERED ENTRANCE */
+          .slide[data-id="latar-belakang"].active .eyebrow {
+            animation: fadeUpBlur 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+          }
+          .slide[data-id="latar-belakang"].active h1.slide-title {
+            animation: fadeUpBlur 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+          }
+          .slide[data-id="latar-belakang"].active .slide-lead {
+            animation: fadeUpBlur 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+          }
+          .slide[data-id="latar-belakang"].active .grid-2 .problem-card:nth-child(1) {
+            animation: cardIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+          }
+          .slide[data-id="latar-belakang"].active .grid-2 .problem-card:nth-child(2) {
+            animation: cardIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+          }
+          .slide[data-id="latar-belakang"].active .grid-2 .problem-card:nth-child(3) {
+            animation: cardIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+          }
+          .slide[data-id="latar-belakang"].active .grid-2 .problem-card:nth-child(4) {
+            animation: cardIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+          }
+          .slide[data-id="latar-belakang"].active .closing-line {
+            animation: closingIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s both;
+          }
+
+          /* ── IDLE & HOVER ANIMATIONS ── */
+          .slide[data-id="latar-belakang"] .problem-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            z-index: 1;
+          }
+          .slide[data-id="latar-belakang"] .problem-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15), 0 0 0 1px rgba(13, 148, 136, 0.2);
+            z-index: 2;
+          }
+          .slide[data-id="latar-belakang"] .problem-card:hover .problem-num {
+            background: var(--primary-color);
+            color: #fff;
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.4);
+          }
+          .slide[data-id="latar-belakang"] .problem-num {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+          }
+        </style>
       </div>
     `;
   },

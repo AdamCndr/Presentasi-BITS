@@ -26,8 +26,11 @@ export default {
               <div class="arch-desc">Vue.js 3 — Panel Manajemen untuk Tim IT</div>
             </div>
           </div>
-          <div style="display:flex;gap:22px;justify-content:center;width:100%;max-width:445px;">
-            <div class="arch-connector"></div><div class="arch-connector"></div>
+          <div class="arch-conn-wrap" style="width:222px; height:40px;">
+            <svg width="222" height="40" style="overflow:visible;">
+              <path class="arch-path" d="M 0,0 L 0,15 A 5 5 0 0 0 5 20 L 106 20 A 5 5 0 0 1 111 25 L 111 40" />
+              <path class="arch-path" d="M 222,0 L 222,15 A 5 5 0 0 1 217 20 L 116 20 A 5 5 0 0 0 111 25 L 111 40" />
+            </svg>
           </div>
           <div class="arch-row">
             <div class="arch-box">
@@ -36,9 +39,15 @@ export default {
               <div class="arch-desc">Node.js + Express</div>
             </div>
           </div>
-          <div class="arch-row" style="gap:60px;margin-top:0;">
-            <div class="arch-connector"></div>
-            <div class="arch-connector"></div>
+          <div class="arch-conn-wrap" style="width:444px; height:40px;">
+            <svg width="444" height="40" style="overflow:visible;">
+              <!-- Center path straight down -->
+              <path class="arch-path" d="M 222,0 L 222,40" />
+              <!-- Center to Left path -->
+              <path class="arch-path" d="M 222,0 L 222,15 A 5 5 0 0 1 217 20 L 5 20 A 5 5 0 0 0 0 25 L 0 40" />
+              <!-- Center to Right path -->
+              <path class="arch-path" d="M 222,0 L 222,15 A 5 5 0 0 0 227 20 L 439 20 A 5 5 0 0 1 444 25 L 444 40" />
+            </svg>
           </div>
           <div class="arch-row">
             <div class="arch-box">
@@ -70,13 +79,31 @@ export default {
             from { opacity: 0; transform: translateY(30px) scale(0.95); filter: blur(10px); }
             to   { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
           }
-          @keyframes archConnectorIn {
-            from { opacity: 0; transform: scaleY(0); transform-origin: top center; }
-            to   { opacity: 1; transform: scaleY(1); }
+          @keyframes archDrawPath {
+            from { clip-path: inset(0 0 100% 0); opacity: 0; }
+            to   { clip-path: inset(0 0 0 0); opacity: 1; }
+          }
+          @keyframes archFlowDash {
+            to { stroke-dashoffset: -28; }
           }
           @keyframes archGlowPulse {
             0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
             50%       { box-shadow: 0 12px 28px rgba(13,148,136,0.15), 0 0 0 1px rgba(13,148,136,0.08); }
+          }
+
+          .arch-conn-wrap {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+          }
+          .arch-path {
+            fill: none;
+            stroke: var(--primary-color);
+            stroke-width: 2px;
+            stroke-dasharray: 8 6;
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 4px rgba(13, 148, 136, 0.3));
+            animation: archFlowDash 1.7s linear infinite;
           }
 
           /* OPENING TITLE */
@@ -99,8 +126,8 @@ export default {
           }
 
           /* CONNECTORS TO BACKEND */
-          .slide[data-id="arsitektur"].active .arch-wrap > div:nth-child(2) .arch-connector {
-            animation: archConnectorIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+          .slide[data-id="arsitektur"].active .arch-wrap > div:nth-child(2) {
+            animation: archDrawPath 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
           }
 
           /* MIDDLE ROW (Backend) */
@@ -109,8 +136,8 @@ export default {
           }
 
           /* CONNECTORS TO DBs */
-          .slide[data-id="arsitektur"].active .arch-wrap > div:nth-child(4) .arch-connector {
-            animation: archConnectorIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
+          .slide[data-id="arsitektur"].active .arch-wrap > div:nth-child(4) {
+            animation: archDrawPath 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.1s both;
           }
 
           /* BOTTOM ROW (Databases/Dashboard Server) */

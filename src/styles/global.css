@@ -1691,64 +1691,154 @@ h1.slide-title span {
   color: var(--text-muted);
 }
 
-.timeline {
+/* =============== SLIDE: TIMELINE INFOGRAPHIC =============== */
+
+/* Outer wrapper: centers timeline vertically in available space */
+.timeline-infographic {
   position: relative;
-  padding-left: 26px;
+  width: 100%;
+  max-width: 960px;
+  margin: 16px auto 0;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 6px;
-  top: 6px;
-  bottom: 6px;
-  width: 2px;
-  background: var(--border-color);
-}
+/* ── Nodes Row (icons + labels alternating above/below) ────── */
 
-.tl-item {
+.tl-nodes-row {
+  display: flex;
+  align-items: stretch;
   position: relative;
-  padding-bottom: 26px;
+  width: 100%;
 }
 
-.tl-item:last-child {
-  padding-bottom: 0;
+.tl-node {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-.tl-dot {
-  position: absolute;
-  left: -26px;
-  top: 2px;
-  width: 14px;
-  height: 14px;
+/* ── Arrow segment (the colored chevron band inside each node column) ── */
+.tl-arrow-segment {
+  width: 100%;
+  height: 34px;
+  background: var(--c);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* notch cut on the left so previous arrow's tip fits in */
+  clip-path: polygon(0% 0%,
+      calc(100% - 18px) 0%,
+      100% 50%,
+      calc(100% - 18px) 100%,
+      0% 100%,
+      18px 50%);
+}
+
+/* All segments same chevron shape — first and last included */
+.tl-node:first-child .tl-arrow-segment,
+.tl-node:last-child .tl-arrow-segment {
+  clip-path: polygon(0% 0%,
+      calc(100% - 18px) 0%,
+      100% 50%,
+      calc(100% - 18px) 100%,
+      0% 100%,
+      18px 50%);
+}
+
+/* White dot in center of the arrow segment */
+.tl-arrow-dot {
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background: #fff;
-  border: 3px solid var(--primary-color);
-  box-shadow: 0 0 0 4px var(--primary-glow);
+  background: rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+  z-index: 1;
 }
 
-.tl-phase {
-  font-size: 11px;
+
+
+/* Top section of node (content above the arrow row) */
+.tl-node-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  min-height: 160px;
+  padding: 0 8px 10px;
+  gap: 10px;
+}
+
+/* Bottom section of node (content below the arrow row) */
+.tl-node-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  min-height: 160px;
+  padding: 10px 8px 0;
+  gap: 10px;
+}
+
+/* Vertical stem connecting the arrow dot to the icon/year above/below */
+.tl-n-line {
+  width: 2px;
+  height: 32px;
+  background: var(--c);
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+
+/* Circular icon (number) */
+.tl-n-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--c);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
   font-weight: 800;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  margin-bottom: 3px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border: 4px solid #fff;
+  flex-shrink: 0;
 }
 
-.tl-month {
+/* Year / Month label */
+.tl-n-month {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--c);
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 6px 0 4px;
+}
+
+/* Phase title (e.g. "FONDASI SISTEM") */
+.tl-n-phase {
   font-size: 11.5px;
-  font-weight: 700;
-  color: var(--text-tertiary);
-  margin-bottom: 6px;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
-.tl-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  max-width: 640px;
+/* Description text */
+.tl-n-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 170px;
 }
+
+
 
 /* =============== SLIDE: METRIK =============== */
 .metric-row {
