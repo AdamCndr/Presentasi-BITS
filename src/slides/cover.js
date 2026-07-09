@@ -18,7 +18,7 @@ export default {
     return `
       <div class="cover">
         <div class="cover-content">
-          <div class="cover-badge">PT Tiga Serangkai Inti Corpora · <b>Kerja Praktek 2026</b></div>
+          <div class="cover-badge">PT Tiga Serangkai Inti Corpora · <b>Magang Mandiri 2026</b></div>
           <div class="cover-logo">
             <img src="assets/brand/bitshorizontal.png" alt="BITS" style="height:72px; width:auto; object-fit:contain; display:block;">
           </div>
