@@ -1910,7 +1910,10 @@ h1.slide-title span {
 /* =============== SLIDE: KESIMPULAN =============== */
 .check-card {
   display: flex;
-  gap: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
 }
 
 .check-ic {
