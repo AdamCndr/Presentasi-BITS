@@ -7,7 +7,7 @@ export default {
 
   render() {
     return `
-      <div class="slide-inner">
+      <div class="slide-inner arch-slide-wrapper" data-active="0">
         <div class="eyebrow">Arsitektur</div>
         <h1 class="slide-title">Arsitektur Sistem <span>Lengkap</span></h1>
         <p class="slide-lead">Sistem BITS dibangun menggunakan arsitektur modern yang memisahkan antara antarmuka pengguna, layanan API, dan pusat penyimpanan data.</p>
@@ -15,13 +15,17 @@ export default {
 
         <div class="arch-wrap">
           <div class="arch-row">
-            <div class="arch-box strong">
-              <div class="arch-ic" style="background:var(--primary-color);">FU</div>
+            <div class="arch-box strong" data-id="1">
+              <div class="arch-ic" style="background:linear-gradient(135deg,var(--primary-color),var(--primary-dark));color:#fff;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
               <div class="arch-name">Frontend User</div>
-              <div class="arch-desc">Vue.js 3 — Portal BI Karyawan + Android</div>
+              <div class="arch-desc">Vue.js 3 — Portal BI User + Android</div>
             </div>
-            <div class="arch-box strong">
-              <div class="arch-ic" style="background:var(--accent-primary);">FA</div>
+            <div class="arch-box strong" data-id="2">
+              <div class="arch-ic" style="background:linear-gradient(135deg,var(--accent-primary),#0284c7);color:#fff;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
               <div class="arch-name">Frontend Admin</div>
               <div class="arch-desc">Vue.js 3 — Panel Manajemen untuk Tim IT</div>
             </div>
@@ -33,8 +37,10 @@ export default {
             </svg>
           </div>
           <div class="arch-row">
-            <div class="arch-box">
-              <div class="arch-ic" style="background:#334155;">BE</div>
+            <div class="arch-box" data-id="3">
+              <div class="arch-ic" style="background:linear-gradient(135deg,#334155,#1e293b);color:#fff;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="6" rx="1.5"/><rect x="2" y="14" width="20" height="6" rx="1.5"/><line x1="6" y1="7" x2="6.01" y2="7"/><line x1="6" y1="17" x2="6.01" y2="17"/></svg>
+              </div>
               <div class="arch-name">Backend API</div>
               <div class="arch-desc">Node.js + Express</div>
             </div>
@@ -50,18 +56,24 @@ export default {
             </svg>
           </div>
           <div class="arch-row">
-            <div class="arch-box">
-              <div class="arch-ic" style="background:#0f766e;">DB</div>
+            <div class="arch-box" data-id="4">
+              <div class="arch-ic" style="background:linear-gradient(135deg,#0f766e,#0d5c56);color:#fff;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
               <div class="arch-name">PostgreSQL</div>
               <div class="arch-desc">Database relasional utama</div>
             </div>
-            <div class="arch-box">
-              <div class="arch-ic" style="background:#dc2626;">SQL</div>
+            <div class="arch-box" data-id="5">
+              <div class="arch-ic" style="background:linear-gradient(135deg,#dc2626,#b91c1c);color:#fff;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+              </div>
               <div class="arch-name">MS SQL Server</div>
               <div class="arch-desc">Sumber Data Eksternal (Dashboard DevExpress)</div>
             </div>
-            <div class="arch-box">
-              <div class="arch-ic" style="background:#8b5cf6;">DS</div>
+            <div class="arch-box" data-id="6">
+              <div class="arch-ic" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed);color:#fff;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              </div>
               <div class="arch-name">Dashboard Server</div>
               <div class="arch-desc">ASP.NET Core — khusus DevExpress</div>
             </div>
@@ -168,6 +180,47 @@ export default {
           .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(1) { animation-delay: 1.3s, 2s; }
           .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(2) { animation-delay: 1.4s, 2s; }
           .slide[data-id="arsitektur"].active .arch-row:nth-child(5) .arch-box:nth-child(3) { animation-delay: 1.5s, 2s; }
+
+          /* HOTKEYS ACTIVE STATES */
+          .arch-slide-wrapper {
+            transition: all 0.3s ease;
+          }
+          .arch-box {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          }
+          
+          /* Highlight active cards */
+          .arch-slide-wrapper[data-active="1"] .arch-box[data-id="1"],
+          .arch-slide-wrapper[data-active="2"] .arch-box[data-id="2"],
+          .arch-slide-wrapper[data-active="3"] .arch-box[data-id="3"],
+          .arch-slide-wrapper[data-active="4"] .arch-box[data-id="4"],
+          .arch-slide-wrapper[data-active="5"] .arch-box[data-id="5"],
+          .arch-slide-wrapper[data-active="6"] .arch-box[data-id="6"] {
+            opacity: 1;
+            transform: scale(1.05);
+            filter: grayscale(0%);
+            z-index: 2;
+            border-color: rgba(13, 148, 136, .6) !important;
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.3), 0 0 0 1px rgba(13, 148, 136, 0.5) !important;
+          }
+          
+          /* Match glow colors to icons for specific boxes */
+          .arch-slide-wrapper[data-active="2"] .arch-box[data-id="2"] {
+             border-color: rgba(14, 165, 233, .6) !important;
+             box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3), 0 0 0 1px rgba(14, 165, 233, 0.5) !important;
+          }
+          .arch-slide-wrapper[data-active="3"] .arch-box[data-id="3"] {
+             border-color: rgba(51, 65, 85, .6) !important;
+             box-shadow: 0 20px 40px rgba(51, 65, 85, 0.3), 0 0 0 1px rgba(51, 65, 85, 0.5) !important;
+          }
+          .arch-slide-wrapper[data-active="5"] .arch-box[data-id="5"] {
+             border-color: rgba(220, 38, 38, .6) !important;
+             box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3), 0 0 0 1px rgba(220, 38, 38, 0.5) !important;
+          }
+          .arch-slide-wrapper[data-active="6"] .arch-box[data-id="6"] {
+             border-color: rgba(139, 92, 246, .6) !important;
+             box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3), 0 0 0 1px rgba(139, 92, 246, 0.5) !important;
+          }
 
         </style>
       </div>

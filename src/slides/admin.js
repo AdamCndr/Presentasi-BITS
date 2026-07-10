@@ -8,8 +8,8 @@ export default {
     'assets/images/Admin-Company.png',
     'assets/images/Admin-OrgChart.png',
     'assets/images/Admin-Position.png',
-    'assets/images/Admin-Menu.png',
     'assets/images/Admin-User.png',
+    'assets/images/Admin-Menu.png',
     'assets/images/DevExpressRepository.png',
   ],
 
@@ -37,10 +37,10 @@ export default {
                 <div class="feat-num">4</div><div class="feat-title">Position Management</div>
               </div>
               <div class="card feat-card admin-feature-card" data-id="5" onclick="document.getElementById('adminSlideWrapper').dataset.active = '5'">
-                <div class="feat-num">5</div><div class="feat-title">Menu Management</div>
+                <div class="feat-num">5</div><div class="feat-title">User Management</div>
               </div>
               <div class="card feat-card admin-feature-card" data-id="6" onclick="document.getElementById('adminSlideWrapper').dataset.active = '6'">
-                <div class="feat-num">6</div><div class="feat-title">User Management</div>
+                <div class="feat-num">6</div><div class="feat-title">Menu Management</div>
               </div>
               <div class="card feat-card admin-feature-card" data-id="7" onclick="document.getElementById('adminSlideWrapper').dataset.active = '7'">
                 <div class="feat-num">7</div><div class="feat-title">DevExpress Repository</div>
@@ -80,17 +80,17 @@ export default {
             </div>
             <div class="admin-detail" data-id="5">
               <ul class="feat-list">
+                <li>Manajemen akun User & assignment jabatan multi-role</li>
+                <li>Fasilitas bypass reset password oleh administrator</li>
+              </ul>
+              <img src="assets/images/Admin-User.png" alt="User Management">
+            </div>
+            <div class="admin-detail" data-id="6">
+              <ul class="feat-list">
                 <li>Manajemen struktur menu dashboard & fitur bulk delete</li>
                 <li>Live preview embed dashboard langsung dari admin panel</li>
               </ul>
               <img src="assets/images/Admin-Menu.png" alt="Menu Management">
-            </div>
-            <div class="admin-detail" data-id="6">
-              <ul class="feat-list">
-                <li>Manajemen akun karyawan & assignment jabatan multi-role</li>
-                <li>Fasilitas bypass reset password oleh administrator</li>
-              </ul>
-              <img src="assets/images/Admin-User.png" alt="User Management">
             </div>
             <div class="admin-detail" data-id="7">
               <ul class="feat-list">

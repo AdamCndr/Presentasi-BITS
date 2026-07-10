@@ -986,7 +986,7 @@ h1.slide-title span {
   background: #fff;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 16px rgba(0, 0, 0, .05);
-  font-size: 11.5px;
+  font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -1031,7 +1031,7 @@ h1.slide-title span {
 }
 
 .cover-full {
-  font-size: 16px;
+  font-size: 23px;
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: .2px;
@@ -1318,15 +1318,15 @@ h1.slide-title span {
   margin-top: 24px;
   padding: 16px 20px;
   border-radius: 14px;
-  background: rgba(239, 68, 68, .05);
-  border: 1px solid rgba(239, 68, 68, .15);
+  background: rgba(13, 148, 136, .05);
+  border: 1px solid rgba(13, 148, 136, .15);
   font-size: 13.5px;
   color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .closing-line b {
-  color: var(--error);
+  color: var(--primary-color);
 }
 
 /* =============== SLIDE: SOLUSI =============== */

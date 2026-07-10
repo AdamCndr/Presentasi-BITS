@@ -19,7 +19,7 @@ export default {
           <!-- Area Kiri: Judul & List Fitur -->
           <div class="user-left-panel">
             <div class="eyebrow">Frontend User</div>
-            <h1 class="slide-title" style="margin-bottom: 24px; font-size: 2.2rem; line-height: 1.2;">Portal Utama <br><span>untuk Karyawan</span></h1>
+            <h1 class="slide-title" style="margin-bottom: 24px; font-size: 2.2rem; line-height: 1.2;">Portal Utama <br><span>untuk User</span></h1>
             
             <div class="user-cards-list">
               <div class="card feat-card user-feature-card" data-id="1" onclick="document.getElementById('userSlideWrapper').dataset.active = '1'">
@@ -47,49 +47,45 @@ export default {
           <div class="user-details-area">
             <div class="user-detail" data-id="1">
               <ul class="feat-list">
-                <li>Menampilkan <strong>infocard statistik</strong> seperti total akses, jumlah dashboard aktif, dan persentase penggunaan platform — memberikan gambaran cepat kondisi portofolio dashboard karyawan</li>
-                <li><strong>Platform Insight</strong> meringkas komposisi tipe dashboard yang dimiliki (Power BI, DevExpress, Looker, dsb.) dalam bentuk chart mini yang informatif</li>
-                <li><strong>Dashboard Hub</strong> menampilkan seluruh daftar dashboard beserta pratinjau chart di halaman utama, memudahkan navigasi tanpa harus membuka satu per satu</li>
-                <li><strong>Profile Card</strong> memperlihatkan identitas, jabatan, dan nama perusahaan pengguna yang sedang aktif di sisi beranda sebagai personalisasi tampilan</li>
+                <li>Menampilkan <strong>infocard statistik</strong> seperti total akses, jumlah dashboard aktif, dan persentase penggunaan platform memberikan gambaran cepat kondisi portofolio dashboard User</li>
+                <li><strong>Dashboard Hub</strong> menampilkan seluruh daftar dashboard beserta pratinjau chart di halaman utama</li>
               </ul>
               <img src="assets/images/User-Home.png" alt="Beranda">
             </div>
             <div class="user-detail" data-id="2">
               <ul class="feat-list">
                 <li>Memetakan posisi setiap dashboard ke dalam <strong>struktur hierarki perusahaan</strong> (Perusahaan → Branch → Departemen → Jabatan) sehingga pengguna dapat memahami konteks dashboard yang mereka akses</li>
-                <li>Menggunakan <strong>Vue Flow</strong> untuk menghadirkan visualisasi node interaktif — pengguna dapat menjelajah dan mengklik node untuk langsung membuka dashboard yang terhubung</li>
+                <li>Menggunakan <strong>Vue Flow</strong> untuk menghadirkan visualisasi node interaktif pengguna dapat menjelajah dan mengklik node untuk langsung membuka dashboard yang terhubung</li>
                 <li>Mendukung <strong>filter dan pencarian</strong> berdasarkan nama perusahaan atau jabatan, mempercepat eksplorasi di lingkungan organisasi berskala besar</li>
               </ul>
               <img src="assets/images/User-DashboardHub.png" alt="Dashboard Hub">
             </div>
             <div class="user-detail" data-id="3">
               <ul class="feat-list">
-                <li>Menampilkan dashboard langsung di dalam aplikasi melalui <strong>embed dinamis</strong>, tanpa perlu membuka tab baru atau aplikasi terpisah — pengalaman yang terintegrasi dan mulus</li>
-                <li>Pengguna dapat berinteraksi penuh dengan chart seperti <strong>filter, drill-down, tooltip, dan zoom</strong> layaknya menggunakan platform aslinya</li>
-                <li>Token autentikasi dan parameter embed dikelola otomatis oleh backend sehingga akses ke setiap platform tetap <strong>aman dan terotorisasi</strong></li>
+                <li>Menampilkan dashboard langsung di dalam aplikasi melalui <strong>embed dinamis</strong>, tanpa perlu membuka tab baru atau aplikasi terpisah pengalaman yang terintegrasi dan mulus</li>
+                <li>Pengguna dapat berinteraksi dengan halaman <strong>dashboard</strong> seperti platform aslinya</li>
               </ul>
               <img src="assets/images/User-Dashboard.png" alt="Dashboard Preview">
             </div>
             <div class="user-detail" data-id="4">
               <ul class="feat-list">
-                <li>Menjalankan presentasi dashboard secara <strong>otomatis fullscreen</strong> dengan rotasi antar halaman — ideal untuk tampilan di layar ruang rapat atau lobby perusahaan</li>
-                <li>Pengguna dapat menyusun <strong>playlist</strong> berisi urutan dashboard dari berbagai platform berbeda, lengkap dengan pengaturan durasi tampil masing-masing</li>
-                <li>Mode <strong>Manual</strong> memungkinkan presenter mengendalikan transisi secara langsung, sementara mode <strong>Auto</strong> berjalan mandiri tanpa interaksi</li>
+                <li>Menjalankan presentasi dashboard secara <strong>otomatis fullscreen</strong> dengan rotasi antar halaman</li>
+                <li>Pengguna dapat menyusun <strong>Preset</strong> berisi urutan dashboard dari berbagai platform berbeda, lengkap dengan pengaturan durasi tampil masing-masing</li>
+                <li>Mode <strong>Manual</strong> memungkinkan User mengendalikan transisi secara langsung, sementara mode <strong>Auto</strong> berjalan otomatis tanpa interaksi</li>
               </ul>
               <img src="assets/images/User-Slideshow.png" alt="Slideshow">
             </div>
             <div class="user-detail" data-id="5">
               <ul class="feat-list">
-                <li>Menampilkan data lengkap karyawan meliputi <strong>nama, NIP, email, jabatan, dan perusahaan</strong> yang terkoneksi langsung dari data master sistem</li>
-                <li>Memperlihatkan <strong>daftar akses menu</strong> yang dimiliki berdasarkan jabatan, memberikan transparansi atas hak akses dashboard yang tersedia</li>
-                <li>Dilengkapi <strong>log aktivitas sesi</strong> yang mencatat kapan pengguna terakhir login dan dashboard apa saja yang pernah dibuka sebagai jejak penggunaan</li>
+                <li>Menampilkan data lengkap User meliputi <strong>Nama Lengkap, UserName, Role, Posisi</strong> yang terkoneksi langsung dari data master sistem</li>
+                <li>Memperlihatkan <strong>daftar akses menu</strong> yang dimiliki berdasarkan jabatan</li>
               </ul>
               <img src="assets/images/User-Profile.png" alt="Profil">
             </div>
             <div class="user-detail" data-id="6">
               <ul class="feat-list">
                 <li>Portal mendukung <strong>6 platform Business Intelligence</strong> terkemuka yang dapat diintegrasikan secara bersamaan dalam satu antarmuka pengguna yang terpadu</li>
-                <li>Setiap platform menggunakan <strong>metode teknis integrasi yang berbeda</strong> — mulai dari SDK resmi, Iframe dinamis, hingga Proxy API — disesuaikan dengan kemampuan embed masing-masing vendor</li>
+                <li>Setiap platform menggunakan <strong>metode teknis integrasi yang berbeda</strong>   mulai dari SDK resmi, Iframe dinamis, hingga Proxy API disesuaikan dengan kemampuan embed masing-masing vendor</li>
               </ul>
               <div class="card" style="padding:0; overflow:hidden; flex-shrink: 0;">
                 <table class="tbl" style="margin: 0; font-size: 0.9em; width: 100%;">

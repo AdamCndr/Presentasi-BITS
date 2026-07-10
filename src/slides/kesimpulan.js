@@ -7,7 +7,7 @@ export default {
 
   render() {
     return `
-      <div class="slide-inner">
+      <div class="slide-inner kesim-slide-wrapper" data-active="0">
         <div class="eyebrow">Kesimpulan</div>
         <h1 class="slide-title">Hasil Akhir & <span>Dampak</span></h1>
         <p class="slide-lead">Implementasi portal BITS memberikan tiga transformasi utama bagi operasional PT Tiga Serangkai Inti Corpora.</p>
@@ -15,7 +15,7 @@ export default {
         <div class="grid-3">
 
           <!-- Card 1: Efisiensi -->
-          <div class="card check-card">
+          <div class="card check-card" data-id="1">
             <div class="check-ic-wrap" style="background:linear-gradient(135deg,var(--primary-color),var(--primary-dark));">
               <svg class="check-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="9"/>
@@ -29,7 +29,7 @@ export default {
           </div>
           
           <!-- Card 2: Keamanan -->
-          <div class="card check-card">
+          <div class="card check-card" data-id="2">
             <div class="check-ic-wrap" style="background:linear-gradient(135deg,var(--accent-primary),#0284c7);">
               <svg class="check-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/>
@@ -44,7 +44,7 @@ export default {
           </div>
           
           <!-- Card 3: Fleksibilitas -->
-          <div class="card check-card">
+          <div class="card check-card" data-id="3">
             <div class="check-ic-wrap" style="background:linear-gradient(135deg,#f59e0b,#d97706);">
               <svg class="check-svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="1.5" y="4" width="13.5" height="9.5" rx="1.5"/>
@@ -193,6 +193,40 @@ export default {
             transition: transform 0.35s var(--ease-out-expo);
           }
           .slide[data-id="kesimpulan"] .check-card:hover .check-ic-wrap {
+            transform: scale(1.08) rotate(-2deg);
+          }
+
+          /* HOTKEYS ACTIVE STATES */
+          .kesim-slide-wrapper {
+            transition: all 0.3s ease;
+          }
+          .kesim-slide-wrapper .check-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          }
+          
+          .kesim-slide-wrapper[data-active="1"] .check-card[data-id="1"],
+          .kesim-slide-wrapper[data-active="2"] .check-card[data-id="2"],
+          .kesim-slide-wrapper[data-active="3"] .check-card[data-id="3"] {
+            transform: translateY(-6px) scale(1.03) !important;
+            z-index: 2;
+          }
+          
+          .kesim-slide-wrapper[data-active="1"] .check-card[data-id="1"] {
+            border-color: rgba(13, 148, 136, .6) !important;
+            box-shadow: 0 20px 50px rgba(13, 148, 136, 0.35), 0 0 0 1px rgba(13, 148, 136, 0.5) !important;
+          }
+          .kesim-slide-wrapper[data-active="2"] .check-card[data-id="2"] {
+            border-color: rgba(14, 165, 233, .6) !important;
+            box-shadow: 0 20px 50px rgba(14, 165, 233, 0.35), 0 0 0 1px rgba(14, 165, 233, 0.5) !important;
+          }
+          .kesim-slide-wrapper[data-active="3"] .check-card[data-id="3"] {
+            border-color: rgba(245, 158, 11, .6) !important;
+            box-shadow: 0 20px 50px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.5) !important;
+          }
+          
+          .kesim-slide-wrapper[data-active="1"] .check-card[data-id="1"] .check-ic-wrap,
+          .kesim-slide-wrapper[data-active="2"] .check-card[data-id="2"] .check-ic-wrap,
+          .kesim-slide-wrapper[data-active="3"] .check-card[data-id="3"] .check-ic-wrap {
             transform: scale(1.08) rotate(-2deg);
           }
         </style>

@@ -7,13 +7,13 @@ export default {
 
   render() {
     return `
-      <div class="slide-inner">
+      <div class="slide-inner tech-slide-wrapper" data-active="0">
         <div class="eyebrow">Teknologi</div>
         <h1 class="slide-title">Tech Stack <span>Full Sistem</span></h1>
         <p class="slide-lead">Kombinasi tools yang dipilih untuk kebutuhan performa, skalabilitas, dan integrasi lintas platform BI.</p>
         <div class="grid-3">
           
-          <div class="card">
+          <div class="card" data-id="1">
             <div class="stack-col-title">Backend API</div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">Node.js</span></div>
@@ -41,7 +41,7 @@ export default {
             </div>
           </div>
           
-          <div class="card">
+          <div class="card" data-id="2">
             <div class="stack-col-title">Dashboard Server</div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">ASP.NET Core (.NET 8)</span></div>
@@ -53,7 +53,7 @@ export default {
             </div>
           </div>
           
-          <div class="card">
+          <div class="card" data-id="3">
             <div class="stack-col-title">Frontend</div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">Vue.js 3</span></div>
@@ -129,6 +129,23 @@ export default {
           .slide[data-id="tech-stack"].active .grid-3 .card {
             animation: stackCardIn 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both,
                        stackGlowPulse 6s ease-in-out 1.5s infinite;
+          }
+
+          /* HOTKEYS ACTIVE STATES */
+          .tech-slide-wrapper {
+            transition: all 0.3s ease;
+          }
+          .tech-slide-wrapper .card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          }
+          
+          .tech-slide-wrapper[data-active="1"] .card[data-id="1"],
+          .tech-slide-wrapper[data-active="2"] .card[data-id="2"],
+          .tech-slide-wrapper[data-active="3"] .card[data-id="3"] {
+            transform: scale(1.05) !important;
+            border-color: rgba(13, 148, 136, .6) !important;
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.3), 0 0 0 1px rgba(13, 148, 136, 0.5) !important;
+            z-index: 2;
           }
         </style>
       </div>

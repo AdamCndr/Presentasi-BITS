@@ -28,7 +28,7 @@ export default {
               <div class="mentor-item"><b>Luthfia Nurma Hapsari, S.Kom., M.Cs.</b></div>
               <div class="mentor-group-title">PT Tiga Serangkai Inti Corpora</div>
               <div class="mentor-item"><b>Erfan Zaenuddin, S.P.</b> — Centre of Excellence</div>
-              <div class="mentor-item"><b>Andang Tris Yuliadi, S.T</b> &amp; Tim P&amp;D — Manajer Divisi P&amp;D</div>
+              <div class="mentor-item"><b>Andang Tris Yuliadi, S.T &amp; Tim P&amp;D</b></div>
             </div>
           </div>
         </div>

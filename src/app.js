@@ -7,7 +7,6 @@ import techStack from './slides/tech-stack.js';
 import admin from './slides/admin.js';
 import user from './slides/user.js';
 import timeline from './slides/timeline.js';
-import metrik from './slides/metrik.js';
 import kesimpulan from './slides/kesimpulan.js';
 import penutup from './slides/penutup.js';
 
@@ -24,7 +23,7 @@ import { mountProgress } from './components/progress.js';
 // ═══════════════════════════════════════════
 const slides = [
   cover, tim, latarBelakang, solusi, arsitektur,
-  techStack, admin, user, timeline, metrik,
+  techStack, admin, user, timeline,
   kesimpulan, penutup,
 ].sort((a, b) => a.order - b.order);
 
@@ -115,6 +114,32 @@ document.addEventListener('keydown', (e) => {
     if (modal && modal.classList.contains('open')) {
       modal.classList.remove('open');
       return;
+    }
+  }
+
+  // Hotkeys 1-9 and 0 for slide points selection
+  if (/^[0-9]$/.test(e.key)) {
+    const activeSlide = document.querySelector('.slide.active');
+    if (activeSlide) {
+      const wrapper = activeSlide.querySelector('[data-active]');
+      if (wrapper) {
+        let val = e.key === '0' ? '10' : e.key;
+        const targetElement = wrapper.querySelector(`[data-id="${val}"]`);
+        if (targetElement) {
+          wrapper.dataset.active = val;
+        }
+      }
+    }
+  }
+
+  // Reset hotkey (backtick) for slide points selection
+  if (e.key === '`') {
+    const activeSlide = document.querySelector('.slide.active');
+    if (activeSlide) {
+      const wrapper = activeSlide.querySelector('[data-active]');
+      if (wrapper) {
+        wrapper.dataset.active = '0';
+      }
     }
   }
 
