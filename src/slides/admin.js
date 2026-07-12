@@ -52,50 +52,50 @@ export default {
           <div class="admin-details-area">
             <div class="admin-detail" data-id="1">
               <ul class="feat-list">
-                <li>Statistik ringkasan perusahaan, jabatan, dan pengguna</li>
-                <li>Log Aktivitas Admin (audit trail) secara real-time</li>
+                <li>Melihat ringkasan total perusahaan, jabatan, dan pengguna terdaftar</li>
+                <li>Memantau rekam jejak (log aktivitas) apa saja yang dilakukan oleh tim Admin</li>
               </ul>
               <img src="assets/images/Admin-Home.png" alt="Beranda">
             </div>
             <div class="admin-detail" data-id="2">
               <ul class="feat-list">
-                <li>CRUD perusahaan, branch, dan departemen</li>
-                <li>Manajemen data induk hierarki organisasi</li>
+                <li>Menambah, mengubah, atau menghapus data Campany, Branch, dan Departemen</li>
+                <li>Mengatur status aktif/nonaktif suatu entitas bisnis dengan mudah</li>
               </ul>
               <img src="assets/images/Admin-Company.png" alt="Company Management">
             </div>
             <div class="admin-detail" data-id="3">
               <ul class="feat-list">
-                <li>Visualisasi struktur organisasi secara interaktif via Vue Flow</li>
-                <li>Pemetaan relasi parent-child antar entitas dengan fitur reparenting</li>
+                <li>Menampilkan struktur organisasi secara visual (berbentuk bagan)</li>
+                <li>Memudahkan pengaturan ulang struktur hanya dengan menggeser (drag & drop)</li>
               </ul>
               <img src="assets/images/Admin-OrgChart.png" alt="Org Chart">
             </div>
             <div class="admin-detail" data-id="4">
               <ul class="feat-list">
-                <li>CRUD jabatan struktural di seluruh perusahaan</li>
-                <li>Mapping akses jabatan ke menu dashboard (PositionMenu)</li>
+                <li>Menambah, mengubah, dan menonaktifkan data jabatan secara terpusat</li>
+                <li>Memetakan posisi setiap jabatan secara akurat ke dalam hierarki perusahaan</li>
               </ul>
               <img src="assets/images/Admin-Position.png" alt="Position Management">
             </div>
             <div class="admin-detail" data-id="5">
               <ul class="feat-list">
-                <li>Manajemen akun User & assignment jabatan multi-role</li>
-                <li>Fasilitas bypass reset password oleh administrator</li>
+                <li>Membuat akun pengguna dan menugaskannya ke satu atau beberapa jabatan sekaligus</li>
+                <li>Membantu melakukan reset password jika pengguna lupa kata sandi</li>
               </ul>
               <img src="assets/images/Admin-User.png" alt="User Management">
             </div>
             <div class="admin-detail" data-id="6">
               <ul class="feat-list">
-                <li>Manajemen struktur menu dashboard & fitur bulk delete</li>
-                <li>Live preview embed dashboard langsung dari admin panel</li>
+                <li>Mengatur daftar dashboard yang tampil di portal dan menentukan jabatan apa saja yang boleh mengaksesnya</li>
+                <li>Melihat cuplikan (preview) langsung tampilan dashboard sebelum dipublikasikan</li>
               </ul>
               <img src="assets/images/Admin-Menu.png" alt="Menu Management">
             </div>
             <div class="admin-detail" data-id="7">
               <ul class="feat-list">
-                <li>Konfigurasi terpusat & test koneksi ke Dashboard Server API</li>
-                <li>Sinkronisasi file layout dashboard XML secara berkala</li>
+                <li>Mengelola konfigurasi koneksi ke database eksternal yang menyimpan dashboard DevExpress.</li>
+                <li>Menarik dan memperbarui daftar dashboard DevExpress secara otomatis</li>
               </ul>
               <img src="assets/images/DevExpressRepository.png" alt="DevExpress Repository">
             </div>
