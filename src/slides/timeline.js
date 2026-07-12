@@ -31,7 +31,7 @@ export default {
             <!-- Node 2 (Mar): Konten ATAS garis -->
             <div class="tl-node" style="--c: var(--primary-color);">
               <div class="tl-node-top">
-                <div class="tl-n-phase">Fondasi Sistem</div>
+                <div class="tl-n-phase">Arsitektur & Core System</div>
                 <div class="tl-n-icon-circle">2</div>
                 <div class="tl-n-line"></div>
               </div>
@@ -52,14 +52,14 @@ export default {
               <div class="tl-node-bottom">
                 <div class="tl-n-line"></div>
                 <div class="tl-n-icon-circle">3</div>
-                <div class="tl-n-phase">Fitur Utama</div>
+                <div class="tl-n-phase">Implementasi Fitur</div>
               </div>
             </div>
 
             <!-- Node 4 (Mei): Konten ATAS garis -->
             <div class="tl-node" style="--c: var(--accent-purple);">
               <div class="tl-node-top">
-                <div class="tl-n-phase">Stabilisasi &amp; Mobile</div>
+                <div class="tl-n-phase">Optimasi &amp; Mobile</div>
                 <div class="tl-n-icon-circle">4</div>
                 <div class="tl-n-line"></div>
               </div>
