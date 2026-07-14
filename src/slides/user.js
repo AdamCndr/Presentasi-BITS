@@ -26,7 +26,7 @@ export default {
                 <div class="feat-num">1</div><div class="feat-title">Halaman Beranda</div>
               </div>
               <div class="card feat-card user-feature-card" data-id="2" onclick="document.getElementById('userSlideWrapper').dataset.active = '2'">
-                <div class="feat-num">2</div><div class="feat-title">Chart Dashboard Hub</div>
+                <div class="feat-num">2</div><div class="feat-title">Dashboard Hub</div>
               </div>
               <div class="card feat-card user-feature-card" data-id="3" onclick="document.getElementById('userSlideWrapper').dataset.active = '3'">
                 <div class="feat-num">3</div><div class="feat-title">Dashboard Preview</div>
