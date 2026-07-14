@@ -67,9 +67,9 @@ export default {
           </div>
 
           <div class="card team-card" data-id="4">
-            <div class="team-photo" style="background:linear-gradient(160deg,#0ea5e9,#0284c7);">
+            <div class="team-photo">
               <div class="team-photo-veil"></div>
-              <span class="team-photo-initial">AB</span>
+              <img src="assets/team/bevan.jpeg" alt="Bevan" style="width:100%;height:100%;object-fit:cover;object-position:top;">
             </div>
             <div class="team-body" style="min-height:84px;">
               <div class="team-name">Aurellius Bevan Yudira</div>
