@@ -23,8 +23,7 @@ export default {
             <img src="assets/brand/bitshorizontal.png" alt="BITS" style="height:72px; width:auto; object-fit:contain; display:block;">
           </div>
           <div class="cover-full">Business Intelligence Tiga Serangkai Portal</div>
-          <p class="cover-quote">BITS Portal dikembangkan sebagai portal web internal Perusahaan untuk mengintegrasikan berbagai platform Business Intelligence
-<i> (Power BI, Google Looker, Looker Studio, Tableau, Metabase, Devexpress Dashboard)</i> dalam satu sistem terpusat.</p>
+          <p class="cover-quote">BITS Portal dikembangkan sebagai portal web internal Perusahaan untuk mengintegrasikan berbagai platform Business Intelligence dalam satu sistem terpusat.</p>
           <div class="cover-meta"><span>Presentasi Full Tim</span><span class="sep"></span><span>Februari – Juni 2026</span></div>
           <div class="platform-row">
             <div class="platform-chip"><img src="assets/icons/powerbi.png" class="plat-ic" style="background:transparent; object-fit:contain; padding:2px;" alt="PB">Power BI</div>
