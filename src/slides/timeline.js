@@ -2,7 +2,7 @@
 export default {
   id: 'timeline',
   title: 'Timeline',
-  order: 8,
+  order: 9,
   assets: [],
 
   render() {
