@@ -1705,7 +1705,7 @@ h1.slide-title span {
 
 .tl-nodes-row {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   position: relative;
   width: 100%;
 }
@@ -1768,7 +1768,7 @@ h1.slide-title span {
   align-items: center;
   text-align: center;
   justify-content: flex-end;
-  min-height: 160px;
+  height: 240px;
   padding: 0 8px 10px;
   gap: 10px;
 }
@@ -1780,7 +1780,7 @@ h1.slide-title span {
   align-items: center;
   text-align: center;
   justify-content: flex-start;
-  min-height: 160px;
+  height: 240px;
   padding: 10px 8px 0;
   gap: 10px;
 }
