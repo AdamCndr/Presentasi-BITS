@@ -47,15 +47,14 @@ export default {
           <div class="user-details-area">
             <div class="user-detail" data-id="1">
               <ul class="feat-list">
-                <li>Menampilkan <strong>infocard statistik</strong> seperti total akses, jumlah dashboard aktif, dan persentase penggunaan platform memberikan gambaran cepat kondisi portofolio dashboard User</li>
-                <li><strong>Dashboard Hub</strong> menampilkan seluruh daftar dashboard beserta pratinjau chart di halaman utama</li>
+                <li>Menampilkan <strong>ringkasan akses</strong> berupa total dashboard tersedia, jumlah jabatan, dan platform yang aktif</li>
+                <li>Menyajikan <strong>Platform Insight</strong> — panduan singkat setiap platform BI yang tersedia beserta profil singkat pengguna</li>
               </ul>
               <img src="assets/images/User-Home.png" alt="Beranda">
             </div>
             <div class="user-detail" data-id="2">
               <ul class="feat-list">
                 <li>Memetakan posisi setiap dashboard ke dalam <strong>struktur hierarki perusahaan</strong> (Perusahaan → Branch → Departemen → Jabatan) sehingga pengguna dapat memahami konteks dashboard yang mereka akses</li>
-                <li>Menggunakan <strong>Vue Flow</strong> untuk menghadirkan visualisasi node interaktif pengguna dapat menjelajah dan mengklik node untuk langsung membuka dashboard yang terhubung</li>
                 <li>Mendukung <strong>filter dan pencarian</strong> berdasarkan nama perusahaan atau jabatan, mempercepat eksplorasi di lingkungan organisasi berskala besar</li>
               </ul>
               <img src="assets/images/User-DashboardHub.png" alt="Dashboard Hub">
@@ -89,17 +88,17 @@ export default {
               </ul>
               <div class="card" style="padding:0; overflow:hidden; flex-shrink: 0;">
                 <table class="tbl" style="margin: 0; font-size: 0.9em; width: 100%;">
-                  <thead><tr><th style="padding: 12px;">Platform</th><th style="padding: 12px;">Komponen</th><th style="padding: 12px;">Metode Integrasi</th></tr></thead>
+                  <thead><tr><th style="padding: 12px;">Platform</th><th style="padding: 12px;">Metode Integrasi</th></tr></thead>
                   <tbody>
-                    <tr><td style="padding: 8px 12px;"><b>Microsoft Power BI</b></td><td style="padding: 8px 12px;">powerbi.vue</td><td style="padding: 8px 12px;">SDK powerbi-client (token dari backend)</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Google Looker</b></td><td style="padding: 8px 12px;">looker.vue</td><td style="padding: 8px 12px;">iframe embed</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Looker Studio</b></td><td style="padding: 8px 12px;">lookerstudio.vue</td><td style="padding: 8px 12px;">iframe embed</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Metabase</b></td><td style="padding: 8px 12px;">metabase.vue</td><td style="padding: 8px 12px;">iframe embed</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Tableau</b></td><td style="padding: 8px 12px;">DashboardEmbed.vue</td><td style="padding: 8px 12px;">iframe dinamis via /dashboard/:id</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>DevExpress</b></td><td style="padding: 8px 12px;">DashboardEmbed.vue</td><td style="padding: 8px 12px;">Proxy backend → Dashboard Server ASP.NET</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Microsoft Power BI</b></td><td style="padding: 8px 12px;">SDK powerbi-client (token dari backend)</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Google Looker</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Looker Studio</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Metabase</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Tableau</b></td><td style="padding: 8px 12px;">Tableau Embedding API v3 (Web Component)</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>DevExpress</b></td><td style="padding: 8px 12px;">Proxy backend → Dashboard Server ASP.NET</td></tr>
                   </tbody>
                 </table>
-              </div>
+              </div>  
             </div>
           </div>
         </div>
