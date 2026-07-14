@@ -47,11 +47,11 @@ export default {
           </div>
           <div class="arch-conn-wrap" style="width:444px; height:40px;">
             <svg width="444" height="40" style="overflow:visible;">
-              <!-- Center path straight down -->
-              <path class="arch-path" d="M 222,0 L 222,40" />
-              <!-- Center to Left path -->
-              <path class="arch-path" d="M 222,0 L 222,15 A 5 5 0 0 1 217 20 L 5 20 A 5 5 0 0 0 0 25 L 0 40" />
-              <!-- Center to Right path -->
+              <!-- Tengah: ke MS SQL Server -> flow ke atas (reverse) -->
+              <path class="arch-path arch-path-reverse" d="M 222,0 L 222,40" />
+              <!-- Kiri: ke PostgreSQL -> flow ke atas (reverse) -->
+              <path class="arch-path arch-path-reverse" d="M 222,0 L 222,15 A 5 5 0 0 1 217 20 L 5 20 A 5 5 0 0 0 0 25 L 0 40" />
+              <!-- Kanan: ke Dashboard Server -> tetap flow ke bawah -->
               <path class="arch-path" d="M 222,0 L 222,15 A 5 5 0 0 0 227 20 L 439 20 A 5 5 0 0 1 444 25 L 444 40" />
             </svg>
           </div>
@@ -116,6 +116,10 @@ export default {
             stroke-linecap: round;
             filter: drop-shadow(0 0 4px rgba(13, 148, 136, 0.3));
             animation: archFlowDash 1.7s linear infinite;
+          }
+
+          .arch-path-reverse {
+            animation-direction: reverse;
           }
 
           /* OPENING TITLE */
