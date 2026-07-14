@@ -94,8 +94,8 @@ export default {
             </div>
             <div class="admin-detail" data-id="7">
               <ul class="feat-list">
-                <li>Mengelola konfigurasi koneksi ke database eksternal yang menyimpan dashboard DevExpress.</li>
-                <li>Menarik dan memperbarui daftar dashboard DevExpress secara otomatis</li>
+                <li>Pusat pengaturan sumber data untuk laporan DevExpress</li>
+                <li>Mengambil daftar dashboard beserta file XML-nya melalui proses sinkronisasi</li>
               </ul>
               <img src="assets/images/DevExpressRepository.png" alt="DevExpress Repository">
             </div>
