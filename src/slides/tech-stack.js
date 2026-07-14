@@ -17,11 +17,11 @@ export default {
             <div class="stack-col-title">Backend API</div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">Node.js</span></div>
-              <div class="stack-reason">Runtime JavaScript yang ringan dan async-first</div>
+              <div class="stack-reason">Runtime JavaScript backend yang sangat cepat, ringan, dan non-blocking"</div>
             </div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">Express.js</span></div>
-              <div class="stack-reason">Framework API yang cepat dengan ekosistem besar</div>
+              <div class="stack-reason">Framework REST API yang efisien dengan ekosistem library pendukung yang besar</div>
             </div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">PostgreSQL</span></div>
@@ -49,7 +49,7 @@ export default {
             </div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">DevExpress Dashboard</span></div>
-              <div class="stack-reason">SDK enterprise untuk render dashboard secara native</div>
+              <div class="stack-reason">SDK enterprise untuk merender file XML layout dashboard secara langsung</div>
             </div>
           </div>
           
@@ -57,11 +57,11 @@ export default {
             <div class="stack-col-title">Frontend</div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">Vue.js 3</span></div>
-              <div class="stack-reason">SPA Composition API — modular &amp; reusable</div>
+              <div class="stack-reason">Framework Frontend Single Page App (SPA) berbasis Composition API yang modular.</div>
             </div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">Pinia</span></div>
-              <div class="stack-reason">State management auth (token persist)</div>
+              <div class="stack-reason">State management modern pengganti Vuex untuk menyimpan sesi/token pengguna secara persisten</div>
             </div>
             <div class="stack-item">
               <div class="stack-name-row"><span class="stack-name">Vue Flow</span></div>

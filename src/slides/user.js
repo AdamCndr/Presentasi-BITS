@@ -44,64 +44,69 @@ export default {
           </div>
 
           <!-- Area Kanan: Penjelasan & Gambar -->
+                    <!-- Area Kanan: Penjelasan & Gambar -->
           <div class="user-details-area">
+            
             <div class="user-detail" data-id="1">
               <ul class="feat-list">
-                <li>Menampilkan <strong>ringkasan akses</strong> berupa total dashboard tersedia, jumlah jabatan, dan platform yang aktif</li>
-                <li>Menyajikan <strong>Platform Insight</strong> — panduan singkat setiap platform BI yang tersedia beserta profil singkat pengguna</li>
+                <li>Menampilkan ringkasan hak akses pengguna berupa total keseluruhan dashboard yang dapat diakses, jumlah penempatan jabatan, dan ragam platform yang aktif</li>
+                <li>Menyajikan <strong>Platform Insight</strong> yang mengedukasi pengguna tentang karakteristik tiap-tiap platform BI beserta kartu profil ringkas</li>
               </ul>
               <img src="assets/images/User-Home.png" alt="Beranda">
             </div>
+            
             <div class="user-detail" data-id="2">
               <ul class="feat-list">
-                <li>Memetakan posisi setiap dashboard ke dalam <strong>struktur hierarki perusahaan</strong> (Perusahaan → Branch → Departemen → Jabatan) sehingga pengguna dapat memahami konteks dashboard yang mereka akses</li>
-                <li>Mendukung <strong>filter dan pencarian</strong> berdasarkan nama perusahaan atau jabatan, mempercepat eksplorasi di lingkungan organisasi berskala besar</li>
+                <li>Memetakan posisi setiap dashboard secara rapi ke dalam struktur hierarki (Company → Branch → Departemen) agar pengguna paham konteks laporan tersebut</li>
+                <li>Dilengkapi fitur pencarian dan filter interaktif untuk mempermudah navigasi eksplorasi laporan di lingkungan perusahaan berskala besar</li>
               </ul>
               <img src="assets/images/User-DashboardHub.png" alt="Dashboard Hub">
             </div>
+            
             <div class="user-detail" data-id="3">
               <ul class="feat-list">
-                <li>Menampilkan dashboard langsung di dalam aplikasi melalui <strong>embed dinamis</strong>, tanpa perlu membuka tab baru atau aplikasi terpisah pengalaman yang terintegrasi dan mulus</li>
-                <li>Pengguna dapat berinteraksi dengan halaman <strong>dashboard</strong> seperti platform aslinya</li>
+                <li>Merender laporan langsung di dalam portal melalui sistem embed dinamis, memberikan pengalaman yang terpadu tanpa perlu pindah aplikasi</li>
+                <li>Pengguna dapat berinteraksi dengan laporan sama seperti di platform aslinya</li>
               </ul>
               <img src="assets/images/User-Dashboard.png" alt="Dashboard Preview">
             </div>
+            
             <div class="user-detail" data-id="4">
               <ul class="feat-list">
-                <li>Menjalankan presentasi dashboard secara <strong>otomatis fullscreen</strong> dengan rotasi antar halaman</li>
-                <li>Pengguna dapat menyusun <strong>Preset</strong> berisi urutan dashboard dari berbagai platform berbeda, lengkap dengan pengaturan durasi tampil masing-masing</li>
-                <li>Mode <strong>Manual</strong> memungkinkan User mengendalikan transisi secara langsung, sementara mode <strong>Auto</strong> berjalan otomatis tanpa interaksi</li>
+                <li>Memutar presentasi gabungan laporan dari berbagai platform berbeda secara otomatis dalam mode layar penuh (fullscreen)</li>
+                <li>Menyediakan fitur pembuatan <strong>Preset</strong> pribadi, di mana pengguna bisa mengatur urutan kemunculan dashboard lengkap dengan durasi rotasinya (misal: tiap 30 detik)</li>
               </ul>
               <img src="assets/images/User-Slideshow.png" alt="Slideshow">
             </div>
+            
             <div class="user-detail" data-id="5">
               <ul class="feat-list">
-                <li>Menampilkan data lengkap User meliputi <strong>Nama Lengkap, UserName, Role, Posisi</strong> yang terkoneksi langsung dari data master sistem</li>
-                <li>Memperlihatkan <strong>daftar akses menu</strong> yang dimiliki berdasarkan jabatan</li>
+                <li>Menampilkan informasi terpusat mencakup data diri, role sistem, dan daftar seluruh penugasan multi-jabatan yang diemban pengguna</li>
               </ul>
               <img src="assets/images/User-Profile.png" alt="Profil">
             </div>
+            
             <div class="user-detail" data-id="6">
               <ul class="feat-list">
-                <li>Portal mendukung <strong>6 platform Business Intelligence</strong> terkemuka yang dapat diintegrasikan secara bersamaan dalam satu antarmuka pengguna yang terpadu</li>
-                <li>Setiap platform menggunakan <strong>metode teknis integrasi yang berbeda</strong>   mulai dari SDK resmi, Iframe dinamis, hingga Proxy API disesuaikan dengan kemampuan embed masing-masing vendor</li>
+                <li>Mendukung 6 platform Business Intelligence terkemuka dunia yang disatukan secara mulus di bawah satu payung antarmuka</li>
+                <li>Menggunakan pendekatan integrasi khusus yang disesuaikan dengan infrastruktur keamanan masing-masing platform BI</li>
               </ul>
               <div class="card" style="padding:0; overflow:hidden; flex-shrink: 0;">
                 <table class="tbl" style="margin: 0; font-size: 0.9em; width: 100%;">
                   <thead><tr><th style="padding: 12px;">Platform</th><th style="padding: 12px;">Metode Integrasi</th></tr></thead>
                   <tbody>
-                    <tr><td style="padding: 8px 12px;"><b>Microsoft Power BI</b></td><td style="padding: 8px 12px;">SDK powerbi-client (token dari backend)</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Google Looker</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Looker Studio</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Metabase</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Microsoft Power BI</b></td><td style="padding: 8px 12px;">SDK powerbi-client (menggunakan Access Token dari backend)</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Google Looker</b></td><td style="padding: 8px 12px;">Iframe Embed Dinamis</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Looker Studio</b></td><td style="padding: 8px 12px;">Iframe Embed Dinamis</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Metabase</b></td><td style="padding: 8px 12px;">Iframe Embed Dinamis</td></tr>
                     <tr><td style="padding: 8px 12px;"><b>Tableau</b></td><td style="padding: 8px 12px;">Tableau Embedding API v3 (Web Component)</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>DevExpress</b></td><td style="padding: 8px 12px;">Proxy backend → Dashboard Server ASP.NET</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>DevExpress</b></td><td style="padding: 8px 12px;">Reverse Proxy Backend → Dashboard Server ASP.NET</td></tr>
                   </tbody>
                 </table>
               </div>  
             </div>
+            
           </div>
-        </div>
         
         </div>
         
