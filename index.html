@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>BITS — Business Intelligence Tiga Serangkai</title>
-<meta name="description" content="Portal presentasi BITS — Business Intelligence Tiga Serangkai. Satu portal, semua dashboard.">
-<link rel="stylesheet" href="src/styles/global.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>BITS — Business Intelligence Tiga Serangkai</title>
+  <meta name="description"
+    content="Portal presentasi BITS — Business Intelligence Tiga Serangkai. Satu portal, semua dashboard.">
+  <link rel="stylesheet" href="src/styles/global.css">
 </head>
+
 <body>
 
-<!-- WAITING SCREEN -->
-<div class="waiting-screen" id="waiting-screen">
-  <div class="waiting-content">
-    <img src="assets/brand/bitshorizontal.png" alt="BITS" class="waiting-logo" />
-  </div>
-</div>
+  <!-- WAITING SCREEN -->
+  <div class="waiting-screen" id="waiting-screen">
+    <!-- Background layers -->
+    <div class="waiting-grid"></div>
+    <div class="waiting-glow"></div>
 
-<!-- SPLASH -->
-<div class="splash-overlay uninitialized" id="splash">
-  <div class="splash-brand">
-    <div class="splash-icon">
-      <img src="assets/brand/Logo.png" alt="" />
+    <!-- Corner accents -->
+    <div class="waiting-corner tl"></div>
+    <div class="waiting-corner tr"></div>
+    <div class="waiting-corner bl"></div>
+    <div class="waiting-corner br"></div>
+
+    <!-- Floating particles -->
+    <div class="waiting-particles" id="waitingParticles">
+      <span class="wp wp-1"></span>
+      <span class="wp wp-2"></span>
+      <span class="wp wp-3"></span>
+      <span class="wp wp-4"></span>
+      <span class="wp wp-5"></span>
+      <span class="wp wp-6"></span>
     </div>
-    <div class="splash-sep"></div>
-    <div class="splash-wordmark">
-      <img src="assets/brand/bits.png" alt="BITS" />
+
+    <!-- Main content -->
+    <div class="waiting-content" id="waitingContent">
+      <img src="assets/brand/bitshorizontal.png" alt="BITS" class="waiting-logo" />
+
+      <p class="waiting-tagline">Business Intelligence Tiga Serangkai Portal</p>
+
+      <!-- Mockup image -->
+      <div class="waiting-mockup-wrap" id="waitingMockup">
+        <img src="assets/images/MockupHome.png" alt="BITS Dashboard Mockup" class="waiting-mockup-img" />
+      </div>
+
+      <div class="waiting-hint">
+        <span class="waiting-hint-dot"></span>
+        <span>Satu Portal, Semua Dashboard.</span>
+      </div>
     </div>
   </div>
-  <div class="splash-dots">
-    <span></span><span></span><span></span>
+
+  <!-- SPLASH -->
+  <div class="splash-overlay uninitialized" id="splash">
+    <div class="splash-brand">
+      <div class="splash-icon">
+        <img src="assets/brand/Logo.png" alt="" />
+      </div>
+      <div class="splash-sep"></div>
+      <div class="splash-wordmark">
+        <img src="assets/brand/bits.png" alt="BITS" />
+      </div>
+    </div>
+    <div class="splash-dots">
+      <span></span><span></span><span></span>
+    </div>
   </div>
+
+  <!-- ═══════════ MOUNT POINTS FOR COMPONENTS ═══════════ -->
+  <!-- Header (app bar + branding + counter + fullscreen) -->
+  <div id="headerMount"></div>
+
+  <!-- Progress bar -->
+  <div id="progressMount"></div>
+
+  <!-- GLOBAL GLOW -->
+  <div class="grid-bg"></div>
+  <div class="global-glow"></div>
+
+  <!-- DECK — slides are injected here by app.js -->
+  <div class="deck" id="deck"></div>
+
+  <!-- App entry point (ES module) -->
+  <script type="module" src="src/app.js"></script>
+</body>
+
+</html>iv>
+<div class="splash-dots">
+  <span></span><span></span><span></span>
+</div>
 </div>
 
 <!-- ═══════════ MOUNT POINTS FOR COMPONENTS ═══════════ -->
@@ -49,4 +109,5 @@
 <!-- App entry point (ES module) -->
 <script type="module" src="src/app.js"></script>
 </body>
+
 </html>

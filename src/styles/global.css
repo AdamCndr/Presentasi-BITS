@@ -58,7 +58,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  overflow: hidden;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
@@ -68,7 +69,101 @@ body {
   pointer-events: none;
 }
 
+.waiting-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(15, 23, 42, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, .035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 45%, #000 35%, transparent 100%);
+}
+
+.waiting-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 800px 600px at 50% 45%, rgba(14, 165, 133, 0.10) 0%, rgba(14, 165, 233, .05) 45%, transparent 72%);
+}
+
+.waiting-corner {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  z-index: 2;
+  opacity: 0;
+  animation: waitingCornerFade 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+
+.waiting-corner.tl {
+  top: 32px;
+  left: 32px;
+  border-top: 1.5px solid var(--primary-color);
+  border-left: 1.5px solid var(--primary-color);
+}
+
+.waiting-corner.tr {
+  top: 32px;
+  right: 32px;
+  border-top: 1.5px solid var(--primary-color);
+  border-right: 1.5px solid var(--primary-color);
+}
+
+.waiting-corner.bl {
+  bottom: 32px;
+  left: 32px;
+  border-bottom: 1.5px solid var(--primary-color);
+  border-left: 1.5px solid var(--primary-color);
+}
+
+.waiting-corner.br {
+  bottom: 32px;
+  right: 32px;
+  border-bottom: 1.5px solid var(--primary-color);
+  border-right: 1.5px solid var(--primary-color);
+}
+
+@keyframes waitingCornerFade {
+  to { opacity: 0.28; }
+}
+
+/* ── Floating particles ── */
+.waiting-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.wp {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0;
+  animation: wpFloat linear infinite;
+}
+
+.wp-1 { width: 4px;  height: 4px;  left: 18%;  bottom: -8px; animation-duration: 9s;  animation-delay: 0.2s;  opacity: 0.18; }
+.wp-2 { width: 6px;  height: 6px;  left: 35%;  bottom: -8px; animation-duration: 12s; animation-delay: 1.4s;  opacity: 0.12; }
+.wp-3 { width: 3px;  height: 3px;  left: 55%;  bottom: -8px; animation-duration: 8s;  animation-delay: 0.8s;  opacity: 0.20; }
+.wp-4 { width: 5px;  height: 5px;  left: 70%;  bottom: -8px; animation-duration: 11s; animation-delay: 2.1s;  opacity: 0.14; }
+.wp-5 { width: 3px;  height: 3px;  left: 82%;  bottom: -8px; animation-duration: 7s;  animation-delay: 0.5s;  opacity: 0.16; }
+.wp-6 { width: 7px;  height: 7px;  left: 8%;   bottom: -8px; animation-duration: 14s; animation-delay: 3.0s;  opacity: 0.10; }
+
+@keyframes wpFloat {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  10%  { opacity: inherit; }
+  90%  { opacity: inherit; }
+  100% { transform: translateY(-105vh) translateX(40px); opacity: 0; }
+}
+
 .waiting-content {
+  position: relative;
+  z-index: 3;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -76,9 +171,89 @@ body {
 }
 
 .waiting-logo {
-  height: 120px;
+  height: 100px;
   width: auto;
+  opacity: 0;
+  transform: translateY(14px) scale(.94);
+  animation: waitingFadeUp 0.8s var(--ease-out-expo) 0.08s forwards;
 }
+
+.waiting-tagline {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: .2px;
+  margin-top: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: waitingFadeUp 0.7s var(--ease-out-expo) 0.26s forwards;
+}
+
+/* ── Mockup ── */
+.waiting-mockup-wrap {
+  position: relative;
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  animation: waitingFadeUp 0.9s var(--ease-out-expo) 0.44s forwards;
+  filter: drop-shadow(0 20px 48px rgba(15, 23, 42, 0.14)) drop-shadow(0 6px 18px rgba(15, 23, 42, 0.08));
+}
+
+.waiting-mockup-img {
+  display: block;
+  height: clamp(380px, 56vh, 640px);
+  width: auto;
+  position: relative;
+  z-index: 1;
+  animation: mockupFloat 4s ease-in-out 1.4s infinite;
+}
+
+@keyframes mockupFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ── Hint ── */
+.waiting-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: waitingFadeUp 0.7s var(--ease-out-expo) 0.6s forwards;
+}
+
+.waiting-hint-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation: wsHintPulse 2s ease-in-out infinite;
+}
+
+.waiting-hint span:last-child {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  letter-spacing: .4px;
+}
+
+@keyframes wsHintPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.35; transform: scale(0.75); }
+}
+
+@keyframes waitingFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
 
 /* ============ SPLASH ============ */
 .splash-overlay {
