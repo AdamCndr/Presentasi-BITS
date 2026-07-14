@@ -89,17 +89,17 @@ export default {
               </ul>
               <div class="card" style="padding:0; overflow:hidden; flex-shrink: 0;">
                 <table class="tbl" style="margin: 0; font-size: 0.9em; width: 100%;">
-                  <thead><tr><th style="padding: 12px;">Platform</th><th style="padding: 12px;">Komponen</th><th style="padding: 12px;">Metode Integrasi</th></tr></thead>
+                  <thead><tr><th style="padding: 12px;">Platform</th><th style="padding: 12px;">Metode Integrasi</th></tr></thead>
                   <tbody>
-                    <tr><td style="padding: 8px 12px;"><b>Microsoft Power BI</b></td><td style="padding: 8px 12px;">powerbi.vue</td><td style="padding: 8px 12px;">SDK powerbi-client (token dari backend)</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Google Looker</b></td><td style="padding: 8px 12px;">looker.vue</td><td style="padding: 8px 12px;">iframe embed</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Looker Studio</b></td><td style="padding: 8px 12px;">lookerstudio.vue</td><td style="padding: 8px 12px;">iframe embed</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Metabase</b></td><td style="padding: 8px 12px;">metabase.vue</td><td style="padding: 8px 12px;">iframe embed</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>Tableau</b></td><td style="padding: 8px 12px;">DashboardEmbed.vue</td><td style="padding: 8px 12px;">iframe dinamis via /dashboard/:id</td></tr>
-                    <tr><td style="padding: 8px 12px;"><b>DevExpress</b></td><td style="padding: 8px 12px;">DashboardEmbed.vue</td><td style="padding: 8px 12px;">Proxy backend → Dashboard Server ASP.NET</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Microsoft Power BI</b></td><td style="padding: 8px 12px;">SDK powerbi-client (token dari backend)</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Google Looker</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Looker Studio</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Metabase</b></td><td style="padding: 8px 12px;">iframe embed</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>Tableau</b></td><td style="padding: 8px 12px;">Tableau Embedding API v3 (Web Component)</td></tr>
+                    <tr><td style="padding: 8px 12px;"><b>DevExpress</b></td><td style="padding: 8px 12px;">Proxy backend → Dashboard Server ASP.NET</td></tr>
                   </tbody>
                 </table>
-              </div>
+              </div>  
             </div>
           </div>
         </div>
