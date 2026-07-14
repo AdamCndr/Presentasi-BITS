@@ -11,14 +11,7 @@ export default {
         <div class="demo-bg-glow"></div>
 
         <div class="demo-content">
-          <div class="demo-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="5 3 19 12 5 21 5 3"/>
-            </svg>
-            Live Demo
-          </div>
-
-          <h1 class="demo-title">Saatnya Kita<br><span>Lihat Langsung</span></h1>
+          <h1 class="demo-title">Demo<br><span>BITS Portal</span></h1>
           <p class="demo-subtitle">Demo interaktif aplikasi BI-TS — Business Intelligence Tiga Serangkai</p>
 
           <div class="demo-features">
