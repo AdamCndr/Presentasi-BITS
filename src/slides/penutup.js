@@ -3,7 +3,12 @@ export default {
   id: 'penutup',
   title: 'Penutup',
   order: 11,
-  assets: [],
+  assets: [
+    'assets/team/adam.jpeg',
+    'assets/team/naufal.png',
+    'assets/team/septian.png',
+    'assets/team/bevan.jpeg',
+  ],
 
   render() {
     return `
@@ -14,10 +19,10 @@ export default {
           <div class="card">
             <div class="mini-label">Tim Pengembang — 4 Developer</div>
             <div style="display:flex;flex-direction:column;gap:16px;margin-top:6px;">
-              <div class="dev-card"><div class="dev-avatar" style="background:var(--primary-color);">A</div><div><div class="dev-name">Adam</div><div class="dev-role">Frontend User</div></div></div>
-              <div class="dev-card"><div class="dev-avatar" style="background:var(--accent-primary);">N</div><div><div class="dev-name">Nopwal</div><div class="dev-role">Frontend Admin</div></div></div>
-              <div class="dev-card"><div class="dev-avatar" style="background:#8b5cf6;">S</div><div><div class="dev-name">Septian</div><div class="dev-role">Backend API + Dashboard Server</div></div></div>
-              <div class="dev-card"><div class="dev-avatar" style="background:#f59e0b;">B</div><div><div class="dev-name">Bevan</div><div class="dev-role">Backend API + Infrastructure</div></div></div>
+              <div class="dev-card"><div class="dev-avatar"><img src="assets/team/adam.jpeg" alt="Adam Candra Kirana Wardana"></div><div><div class="dev-name">Adam Candra Kirana Wardana</div><div class="dev-role">Frontend User</div></div></div>
+              <div class="dev-card"><div class="dev-avatar"><img src="assets/team/naufal.png" alt="Muhammad Naufal Irfani"></div><div><div class="dev-name">Muhammad Naufal Irfani</div><div class="dev-role">Frontend Admin</div></div></div>
+              <div class="dev-card"><div class="dev-avatar"><img src="assets/team/septian.png" alt="Septian Gilang Dwi Prasetyo"></div><div><div class="dev-name">Septian Gilang Dwi Prasetyo</div><div class="dev-role">Backend API + Dashboard Server</div></div></div>
+              <div class="dev-card"><div class="dev-avatar"><img src="assets/team/bevan.jpeg" alt="Aurellius Bevan Yudira" style="object-position:top;"></div><div><div class="dev-name">Aurellius Bevan Yudira</div><div class="dev-role">Backend API + Infrastructure</div></div></div>
             </div>
           </div>
           <div class="card">
