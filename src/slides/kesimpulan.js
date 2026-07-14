@@ -62,7 +62,7 @@ export default {
         </div>
         
         <div class="quote-block" style="margin-top: 30px;">
-          Secara keseluruhan, <b>Sistem BITS terbukti berhasil</b> mengubah ekosistem data yang sebelumnya tersebar menjadi satu portal cerdas yang aman, efisien, dan siap mendukung pertumbuhan bisnis Tiga Serangkai ke depannya.
+          Secara keseluruhan, <b>Sistem BITS</b> mengubah ekosistem data yang sebelumnya tersebar menjadi satu portal cerdas yang aman, efisien, dan siap mendukung pertumbuhan bisnis Tiga Serangkai ke depannya.
         </div>
 
         <style>

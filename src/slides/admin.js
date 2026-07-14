@@ -21,7 +21,7 @@ export default {
           <!-- Area Kiri: Judul & List Fitur -->
           <div class="admin-left-panel">
             <div class="eyebrow">Frontend Admin</div>
-            <h1 class="slide-title" style="margin-bottom: 24px; font-size: 2.2rem; line-height: 1.2;">7 Halaman Manajemen <br><span>untuk Tim IT</span></h1>
+            <h1 class="slide-title" style="margin-bottom: 24px; font-size: 2.2rem; line-height: 1.2;">Pusat Kendali <br><span>Konfigurasi Sistem</span></h1>
             
             <div class="admin-cards-list">
               <div class="card feat-card admin-feature-card" data-id="1" onclick="document.getElementById('adminSlideWrapper').dataset.active = '1'">
@@ -94,8 +94,8 @@ export default {
             </div>
             <div class="admin-detail" data-id="7">
               <ul class="feat-list">
-                <li>Mengelola konfigurasi koneksi ke database eksternal yang menyimpan dashboard DevExpress.</li>
-                <li>Menarik dan memperbarui daftar dashboard DevExpress secara otomatis</li>
+                <li>Pusat pengaturan sumber data untuk laporan DevExpress</li>
+                <li>Mengambil daftar dashboard beserta file XML-nya melalui proses sinkronisasi</li>
               </ul>
               <img src="assets/images/DevExpressRepository.png" alt="DevExpress Repository">
             </div>

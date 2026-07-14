@@ -2170,6 +2170,14 @@ h1.slide-title span {
   font-weight: 800;
   font-size: 16px;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.dev-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .dev-name {
