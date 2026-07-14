@@ -21,7 +21,7 @@ export default {
           <!-- Area Kiri: Judul & List Fitur -->
           <div class="admin-left-panel">
             <div class="eyebrow">Frontend Admin</div>
-            <h1 class="slide-title" style="margin-bottom: 24px; font-size: 2.2rem; line-height: 1.2;">7 Halaman Manajemen <br><span>untuk Tim IT</span></h1>
+            <h1 class="slide-title" style="margin-bottom: 24px; font-size: 2.2rem; line-height: 1.2;">Fitur Manajemen <br><span>untuk aplikasi Admin</span></h1>
             
             <div class="admin-cards-list">
               <div class="card feat-card admin-feature-card" data-id="1" onclick="document.getElementById('adminSlideWrapper').dataset.active = '1'">

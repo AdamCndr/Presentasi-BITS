@@ -55,7 +55,6 @@ export default {
             <div class="user-detail" data-id="2">
               <ul class="feat-list">
                 <li>Memetakan posisi setiap dashboard ke dalam <strong>struktur hierarki perusahaan</strong> (Perusahaan → Branch → Departemen → Jabatan) sehingga pengguna dapat memahami konteks dashboard yang mereka akses</li>
-                <li>Menggunakan <strong>Vue Flow</strong> untuk menghadirkan visualisasi node interaktif pengguna dapat menjelajah dan mengklik node untuk langsung membuka dashboard yang terhubung</li>
                 <li>Mendukung <strong>filter dan pencarian</strong> berdasarkan nama perusahaan atau jabatan, mempercepat eksplorasi di lingkungan organisasi berskala besar</li>
               </ul>
               <img src="assets/images/User-DashboardHub.png" alt="Dashboard Hub">
