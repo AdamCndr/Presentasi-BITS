@@ -47,7 +47,7 @@ export default {
           <div class="user-details-area">
             <div class="user-detail" data-id="1">
               <ul class="feat-list">
-                li>Menampilkan <strong>ringkasan akses</strong> berupa total dashboard tersedia, jumlah jabatan, dan platform yang aktif</li>
+                <li>Menampilkan <strong>ringkasan akses</strong> berupa total dashboard tersedia, jumlah jabatan, dan platform yang aktif</li>
                 <li>Menyajikan <strong>Platform Insight</strong> — panduan singkat setiap platform BI yang tersedia beserta profil singkat pengguna</li>
               </ul>
               <img src="assets/images/User-Home.png" alt="Beranda">
