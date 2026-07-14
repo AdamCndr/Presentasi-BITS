@@ -19,7 +19,7 @@ export default {
           <!-- Area Kiri: Judul & List Fitur -->
           <div class="user-left-panel">
             <div class="eyebrow">Frontend User</div>
-            <h1 class="slide-title" style="margin-bottom: 24px; font-size: 2.2rem; line-height: 1.2;">Portal Utama <br><span>untuk User</span></h1>
+            <h1 class="slide-title" style="margin-bottom: 24px; font-size: 2.2rem; line-height: 1.2;">Portal Utama <br><span>Akses Dashboard</span></h1>
             
             <div class="user-cards-list">
               <div class="card feat-card user-feature-card" data-id="1" onclick="document.getElementById('userSlideWrapper').dataset.active = '1'">
